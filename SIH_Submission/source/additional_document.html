@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PRAHARI Additional Document</title>
+<style>
+@font-face{font-family:Inter;font-weight:400;src:url(fonts/inter-latin-400-normal.woff2) format('woff2');}
+@font-face{font-family:Inter;font-weight:600;src:url(fonts/inter-latin-600-normal.woff2) format('woff2');}
+@font-face{font-family:Inter;font-weight:700;src:url(fonts/inter-latin-700-normal.woff2) format('woff2');}
+@font-face{font-family:Poppins;font-weight:600;src:url(fonts/poppins-latin-600-normal.woff2) format('woff2');}
+@font-face{font-family:Poppins;font-weight:700;src:url(fonts/poppins-latin-700-normal.woff2) format('woff2');}
+@font-face{font-family:Poppins;font-weight:800;src:url(fonts/poppins-latin-800-normal.woff2) format('woff2');}
+:root{
+  --navy:#0f2a44; --teal:#0e7c7b; --teal-l:#e3f3f2; --saffron:#e8811f; --saffron-l:#fdf0e2;
+  --green:#2e9e5b; --amber:#e0a800; --red:#d64545; --black:#2b2b2b;
+  --ink:#1c2733; --muted:#5b6b7a; --line:#d5dde5; --bg:#ffffff; --panel:#f5f8fb;
+}
+@page{size:297mm 210mm;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,'Liberation Sans',sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:297mm;height:210mm;padding:11mm 13mm 9mm;position:relative;overflow:hidden;page-break-after:always;break-after:page;display:flex;flex-direction:column}
+.page:last-child{page-break-after:auto;break-after:auto}
+h1,h2,h3{font-family:Poppins,Inter,sans-serif;margin:0;color:var(--navy)}
+h2{font-size:19pt;font-weight:700;letter-spacing:-.2px}
+h2 .k{color:var(--saffron)}
+h3{font-size:10.5pt;font-weight:700}
+p{margin:0}
+.sub{color:var(--muted);font-size:9pt;margin-top:1.5mm}
+.hdr{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--navy);padding-bottom:2.5mm;margin-bottom:4mm}
+.hdr .tag{font-size:7.5pt;color:var(--muted);text-align:right;line-height:1.35}
+.hdr .tag b{color:var(--teal)}
+.foot{position:absolute;bottom:4.5mm;left:13mm;right:13mm;display:flex;justify-content:space-between;font-size:7pt;color:var(--muted)}
+ul{margin:0;padding-left:3.6mm}
+li{margin:0 0 .8mm}
+.small{font-size:8pt;line-height:1.38}
+.xs{font-size:7.3pt;line-height:1.33}
+.grow{flex:1;min-height:0}
+.pill{display:inline-block;padding:.6mm 2.2mm;border-radius:10mm;font-size:7pt;font-weight:700;color:#fff}
+/* Cover */
+.cover{background:linear-gradient(135deg,#0f2a44 0%,#12395c 55%,#0e7c7b 100%);color:#fff;padding:0}
+.cover .inner{padding:20mm 20mm 0;flex:1;display:flex;flex-direction:column}
+.cover .eyebrow{font-size:9pt;letter-spacing:2.5px;text-transform:uppercase;color:#9fd8d6;font-weight:600}
+.cover h1{color:#fff;font-size:54pt;font-weight:800;letter-spacing:2px;margin-top:6mm;line-height:1}
+.cover .acr{font-size:10.5pt;color:#cfe3f2;margin-top:3mm;letter-spacing:.3px}
+.cover .acr b{color:var(--saffron)}
+.cover .title{font-family:Poppins;font-weight:600;font-size:17pt;margin-top:8mm;max-width:210mm;line-height:1.3}
+.cover .tagline{margin-top:6mm;font-size:13pt;font-weight:700;color:#ffd7ad;letter-spacing:.5px}
+.cover .meta{margin-top:auto;margin-bottom:14mm;display:grid;grid-template-columns:repeat(4,1fr);gap:5mm}
+.cover .meta div{border-top:1px solid rgba(255,255,255,.35);padding-top:2.5mm;font-size:8pt;color:#cfe3f2;line-height:1.4}
+.cover .meta b{display:block;color:#fff;font-size:9pt;margin-bottom:.5mm}
+.cover .toc{position:absolute;right:20mm;top:22mm;width:78mm;font-size:8.3pt;line-height:1.75;color:#dbe9f5;border-left:2px solid var(--saffron);padding-left:5mm}
+.cover .toc b{color:#fff;display:block;font-size:9pt;margin-bottom:1mm;letter-spacing:1px;text-transform:uppercase}
+/* cards */
+.card{background:var(--panel);border:1px solid var(--line);border-radius:3mm;padding:3.2mm 3.6mm}
+.stat{background:#fff;border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:2mm;padding:2.6mm 3.2mm}
+.stat .n{font-family:Poppins;font-weight:700;font-size:17pt;color:var(--navy);line-height:1.05}
+.stat .l{font-size:7.6pt;color:var(--muted);margin-top:1mm;line-height:1.3}
+.grid{display:grid;gap:3.5mm}
+/* BMC */
+.bmc{display:grid;grid-template-columns:repeat(5,1fr);grid-template-rows:1fr 1fr .78fr;gap:1.8mm;flex:1;min-height:0}
+.bmc .b{border:1.3px solid var(--navy);border-radius:2mm;padding:2.2mm 2.5mm;background:#fff;overflow:hidden}
+.bmc .b h3{font-size:8.3pt;letter-spacing:.4px;text-transform:uppercase;display:flex;align-items:center;gap:1.6mm;margin-bottom:1.2mm}
+.bmc .b h3 .num{display:inline-flex;align-items:center;justify-content:center;width:4.6mm;height:4.6mm;border-radius:50%;background:#35d6a0;color:var(--navy);font-size:7.3pt;flex:none}
+.bmc .b ul{padding-left:3mm}
+.bmc .b li{font-size:6.95pt;line-height:1.28;margin-bottom:.55mm}
+.bmc .b .grp{font-size:6.8pt;font-weight:700;color:var(--teal);margin:.8mm 0 .3mm;text-transform:uppercase;letter-spacing:.3px}
+.kp{grid-column:1;grid-row:1/3}
+.ka{grid-column:2;grid-row:1}
+.kr{grid-column:2;grid-row:2}
+.vp{grid-column:3;grid-row:1/3;background:var(--saffron-l)!important}
+.cr{grid-column:4;grid-row:1}
+.ch{grid-column:4;grid-row:2}
+.cs{grid-column:5;grid-row:1/3}
+.co{grid-column:1/3;grid-row:3}
+.co2{grid-column:3;grid-row:3}
+.rs{grid-column:4/6;grid-row:3}
+table{border-collapse:collapse;width:100%}
+th,td{border:1px solid var(--line);padding:1.5mm 2mm;text-align:left;vertical-align:top}
+th{background:var(--navy);color:#fff;font-weight:600}
+.cmp td,.cmp th{font-size:7.6pt;line-height:1.3}
+.cmp td.y{color:var(--green);font-weight:700;text-align:center}
+.cmp td.n{color:var(--red);text-align:center}
+.cmp td.p{color:var(--amber);text-align:center;font-weight:700}
+.cmp tr.us td{background:var(--teal-l);font-weight:600}
+.kpi td,.kpi th{font-size:7.7pt;line-height:1.3}
+.formula{font-family:'DejaVu Sans Mono',monospace;font-size:7.6pt;background:#0f2a44;color:#e7f1fa;border-radius:2mm;padding:2.4mm 3mm;line-height:1.5}
+.formula .c{color:#8fd3c7}
+.tl{display:grid;grid-template-columns:repeat(6,1fr);gap:2mm}
+.tl .s{border-top:4px solid var(--teal);background:var(--panel);border-radius:0 0 2mm 2mm;padding:2mm 2.3mm}
+.tl .s b{display:block;font-size:8pt;color:var(--navy)}
+.tl .s span{font-size:7pt;color:var(--muted);line-height:1.3;display:block;margin-top:.6mm}
+.road{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.road .r{padding:2.5mm 3mm 2.5mm;border-left:3px solid var(--saffron);background:var(--saffron-l);margin-right:2mm;border-radius:0 2mm 2mm 0}
+.road .r b{font-size:8.3pt;color:var(--navy);display:block}
+.road .r i{font-style:normal;font-size:7pt;color:var(--saffron);font-weight:700}
+.road .r p{font-size:7.1pt;line-height:1.32;margin-top:.8mm}
+.tight td,.tight th{padding:1.1mm 2mm;font-size:7.3pt}
+.ref li{font-size:7.25pt;line-height:1.33;margin-bottom:1mm}
+</style>
+</head>
+<body>
+
+<!-- PAGE 1: COVER -->
+<section class="page cover">
+  <div class="inner">
+    <div class="eyebrow">Smart India Hackathon · Student Innovation · Travel &amp; Tourism</div>
+    <h1>PRAHARI</h1>
+    <div class="acr"><b>P</b>redictive <b>R</b>outing &amp; <b>A</b>I for <b>H</b>otels, <b>A</b>ttractions, <b>R</b>egions &amp; <b>I</b>tineraries</div>
+    <div class="title">AI Demand Forecasting &amp; Crowd Rebalancing to Boost Hotels, Homestays and Travel in India</div>
+    <div class="tagline">PREDICT · PROTECT · REDISTRIBUTE</div>
+    <p style="margin-top:7mm;max-width:190mm;font-size:10.5pt;line-height:1.55;color:#dbe9f5">PRAHARI forecasts where and when tourists will go, compares that forecast with each destination's live carrying capacity, and redirects surplus demand to nearby “twin” destinations and small hotels that have room. It is built on ONDC, Bhashini and UPI, so overcrowding becomes income for local tourism businesses instead of a crisis.</p>
+    <div style="display:flex;gap:4mm;margin-top:6mm">
+      <div style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:2.5mm;padding:2.5mm 4mm;font-size:8.5pt;color:#dbe9f5"><b style="font-family:Poppins;font-size:13pt;color:#fff;display:block">7–14 days</b>early warning of peak crowds</div>
+      <div style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:2.5mm;padding:2.5mm 4mm;font-size:8.5pt;color:#dbe9f5"><b style="font-family:Poppins;font-size:13pt;color:#fff;display:block">+10–15 pts</b>off-season occupancy for small stays</div>
+      <div style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:2.5mm;padding:2.5mm 4mm;font-size:8.5pt;color:#dbe9f5"><b style="font-family:Poppins;font-size:13pt;color:#fff;display:block">&lt; 10 min</b>host onboarding on WhatsApp</div>
+      <div style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:2.5mm;padding:2.5mm 4mm;font-size:8.5pt;color:#dbe9f5"><b style="font-family:Poppins;font-size:13pt;color:#fff;display:block">Single-digit</b>fees vs 15–25% commission</div>
+    </div>
+    <p style="margin-top:2mm;font-size:7.5pt;color:#9fb8cc">Pilot targets, to be validated in the field.</p>
+    <div class="meta">
+      <div><b>Problem Statement</b>Student Innovation: a solution that can boost the tourism industry, including hotels, travel and others</div>
+      <div><b>Document type</b>Additional Document: Business Model Canvas, Technical Architecture &amp; Impact Assessment</div>
+      <div><b>Target users</b>State &amp; district tourism bodies · Hotel, homestay &amp; travel MSMEs · Domestic &amp; foreign travellers</div>
+      <div><b>Built on</b>ONDC · Bhashini · UPI · NIDHI · DigiLocker · NDMA SACHET · 112 ERSS · 1363 helpline</div>
+    </div>
+  </div>
+  <div class="toc">
+    <b>Contents</b>
+    1 &nbsp;Problem &amp; Solution at a glance<br>
+    2 &nbsp;Business Model Canvas<br>
+    3 &nbsp;System Architecture<br>
+    4 &nbsp;Core Algorithms &amp; Technology Choices<br>
+    5 &nbsp;Market &amp; Competitive Landscape<br>
+    6 &nbsp;Impact, Cost-Benefit &amp; Roadmap<br>
+    7 &nbsp;36-Hour Build Plan, Risks &amp; References
+  </div>
+</section>
+
+<!-- PAGE 2: PROBLEM & SOLUTION -->
+<section class="page">
+  <div class="hdr"><div><h2>1 · The problem is <span class="k">mismatch</span>, not shortage</h2><p class="sub">Too many tourists in too few places on too few days, while nearby hotels and homestays stay empty.</p></div><div class="tag"><b>PRAHARI</b><br>Problem &amp; Solution</div></div>
+  <div class="grid" style="grid-template-columns:repeat(5,1fr);margin-bottom:4mm">
+    <div class="stat"><div class="n">2,509 M</div><div class="l">Domestic tourist visits in 2023 (India Tourism Statistics 2024)</div></div>
+    <div class="stat"><div class="n">9.52 M</div><div class="l">Foreign tourist arrivals in 2023, still below 10.93 M in 2019</div></div>
+    <div class="stat"><div class="n">~5%</div><div class="l">Tourism's share of India's GDP (Tourism Satellite Account)</div></div>
+    <div class="stat" style="border-left-color:var(--saffron)"><div class="n">15–25%</div><div class="l">Typical OTA commission paid by small hotels &amp; homestays</div></div>
+    <div class="stat" style="border-left-color:var(--red)"><div class="n">Reactive</div><div class="l">Crowd control today: e-pass caps (Ooty 2024), NGT permits (Rohtang)</div></div>
+  </div>
+  <div class="grid grow" style="grid-template-columns:1fr 1.55fr">
+    <div class="card">
+      <h3>Five pain points we solve</h3>
+      <ul class="small" style="margin-top:2mm">
+        <li><b>Overtourism at hotspots:</b> hours-long traffic jams, water and waste stress, crowd-safety risk on long weekends and festivals.</li>
+        <li><b>Empty rooms nearby:</b> MSME stays sit half-empty for most of the year with strong seasonality.</li>
+        <li><b>Digital exclusion:</b> small hosts are unlisted or dependent on high-commission OTAs, and face language barriers.</li>
+        <li><b>No foresight for officials:</b> tourist data arrives months late, so there is no forecast for next weekend.</li>
+        <li><b>Trust &amp; safety gaps:</b> overcharging, fake listings, and tourists stranded by monsoon disasters.</li>
+      </ul>
+      <h3 style="margin-top:3mm">Why existing solutions fail</h3>
+      <ul class="small" style="margin-top:1.5mm">
+        <li>OTAs <b>sell</b> rooms · Portals <b>inform</b> · Permits <b>restrict</b> · Map apps <b>react</b></li>
+        <li>No one connects demand forecasts with carrying capacity and redistribution.</li>
+      </ul>
+      <h3 style="margin-top:3mm">Who is affected</h3>
+      <table class="kpi" style="margin-top:1.5mm;background:#fff">
+        <tr><td style="width:30%"><b>Travellers</b></td><td>Lost time, surge prices, safety risk, poor experience</td></tr>
+        <tr><td><b>Hotels &amp; MSMEs</b></td><td>Off-season losses, commission drain, no demand visibility</td></tr>
+        <tr><td><b>Communities</b></td><td>Congestion, water &amp; waste stress, rising resentment (Doxey's Irridex)</td></tr>
+        <tr><td><b>Governments</b></td><td>Rescue costs, lost revenue, declining destination brands (Butler's life cycle)</td></tr>
+      </table>
+    </div>
+    <div class="card" style="background:#fff">
+      <h3>PRAHARI closes the loop</h3>
+      <svg viewBox="0 0 560 300" width="100%" style="margin-top:1mm" font-family="Inter, sans-serif">
+        <defs><marker id="ar" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#0f2a44"/></marker></defs>
+        <circle cx="280" cy="150" r="58" fill="#0f2a44"/>
+        <text x="280" y="143" text-anchor="middle" fill="#fff" font-size="17" font-weight="700" font-family="Poppins">PRAHARI</text>
+        <text x="280" y="162" text-anchor="middle" fill="#9fd8d6" font-size="9.5">closed-loop engine</text>
+        <!-- nodes -->
+        <g font-size="10.5">
+          <rect x="195" y="4" width="170" height="54" rx="9" fill="#e3f3f2" stroke="#0e7c7b" stroke-width="1.5"/>
+          <text x="280" y="24" text-anchor="middle" font-weight="700" fill="#0e7c7b" font-size="12">1 · PREDICT (Pulse)</text>
+          <text x="280" y="40" text-anchor="middle" fill="#1c2733" font-size="9.5">Footfall &amp; occupancy forecast</text>
+          <text x="280" y="52" text-anchor="middle" fill="#1c2733" font-size="9.5">1–30 days ahead</text>
+
+          <rect x="392" y="78" width="164" height="58" rx="9" fill="#e3f3f2" stroke="#0e7c7b" stroke-width="1.5"/>
+          <text x="474" y="98" text-anchor="middle" font-weight="700" fill="#0e7c7b" font-size="12">2 · MEASURE (Balance)</text>
+          <text x="474" y="114" text-anchor="middle" fill="#1c2733" font-size="9.5">Dynamic Carrying</text>
+          <text x="474" y="127" text-anchor="middle" fill="#1c2733" font-size="9.5">Capacity Index (D-CCI)</text>
+
+          <rect x="366" y="206" width="180" height="58" rx="9" fill="#fdf0e2" stroke="#e8811f" stroke-width="1.5"/>
+          <text x="456" y="226" text-anchor="middle" font-weight="700" fill="#b85f0c" font-size="12">3 · REDISTRIBUTE</text>
+          <text x="456" y="242" text-anchor="middle" fill="#1c2733" font-size="9.5">Twin destinations +</text>
+          <text x="456" y="255" text-anchor="middle" fill="#1c2733" font-size="9.5">learning-based incentives</text>
+
+          <rect x="14" y="206" width="180" height="58" rx="9" fill="#fdf0e2" stroke="#e8811f" stroke-width="1.5"/>
+          <text x="104" y="226" text-anchor="middle" font-weight="700" fill="#b85f0c" font-size="12">4 · INCLUDE (Setu)</text>
+          <text x="104" y="242" text-anchor="middle" fill="#1c2733" font-size="9.5">WhatsApp onboarding,</text>
+          <text x="104" y="255" text-anchor="middle" fill="#1c2733" font-size="9.5">ONDC distribution, UPI</text>
+
+          <rect x="4" y="78" width="164" height="58" rx="9" fill="#e3f3f2" stroke="#0e7c7b" stroke-width="1.5"/>
+          <text x="86" y="98" text-anchor="middle" font-weight="700" fill="#0e7c7b" font-size="12">5 · PROTECT (Kavach)</text>
+          <text x="86" y="114" text-anchor="middle" fill="#1c2733" font-size="9.5">Verified providers, fair</text>
+          <text x="86" y="127" text-anchor="middle" fill="#1c2733" font-size="9.5">prices, SACHET alerts, SOS</text>
+        </g>
+        <g stroke="#0f2a44" stroke-width="1.6" fill="none" marker-end="url(#ar)">
+          <path d="M365,40 Q440,45 460,76"/>
+          <path d="M490,137 Q500,175 480,204"/>
+          <path d="M366,238 L196,238"/>
+          <path d="M70,205 Q55,170 72,138"/>
+          <path d="M110,77 Q130,40 193,34"/>
+        </g>
+        <text x="280" y="290" text-anchor="middle" font-size="10" fill="#5b6b7a">Drishti dashboard gives governments visibility and control over every step of the loop</text>
+      </svg>
+      <div style="display:flex;justify-content:space-between;margin-top:1mm">
+        <div class="xs"><span class="pill" style="background:var(--green)">GREEN</span> load &lt; 0.8</div>
+        <div class="xs"><span class="pill" style="background:var(--amber)">AMBER</span> 0.8 – 1.0</div>
+        <div class="xs"><span class="pill" style="background:var(--red)">RED</span> &gt; 1.0 → rebalance</div>
+        <div class="xs"><span class="pill" style="background:var(--black)">BLACK</span> hazard / closed</div>
+      </div>
+      <div style="margin-top:3mm;border-top:1px dashed var(--line);padding-top:2.5mm" class="xs">
+        <b style="color:var(--navy)">Example in 30 seconds:</b> Manali is forecast <b style="color:var(--red)">RED</b> for the long weekend (2.1× normal crowd) → PRAHARI suggests Tirthan Valley (<b style="color:var(--green)">GREEN</b>, 3 h closer, 38 verified homestays, 15% off) → the traveller books via ONDC + UPI → homestay owner Ramesh gets a booking he would never have received → the Kullu District Tourism Officer saw the peak a week earlier on Drishti and pre-positioned police, buses and sanitation.
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>PRAHARI · SIH Student Innovation · Additional Document</span><span>2</span></div>
+</section>
+
+<!-- PAGE 3: BUSINESS MODEL CANVAS -->
+<section class="page">
+  <div class="hdr"><div><h2>2 · Business Model <span class="k">Canvas</span></h2><p class="sub">Commercial viability, social impact and scalability. All financial figures are indicative estimates for a district pilot.</p></div><div class="tag"><b>PRAHARI</b><br>Business Model</div></div>
+  <div class="bmc">
+    <div class="b kp"><h3><span class="num">8</span>Key Partners</h3>
+      <div class="grp">Government</div>
+      <ul><li>Ministry of Tourism (NIDHI, Incredible India content, 1363)</li><li>State tourism departments &amp; district administrations (pilot MoUs)</li><li>NDMA / SDMAs (SACHET alerts), 112 ERSS</li><li>ONDC, Bhashini (MeitY), NIC</li></ul>
+      <div class="grp">Technology</div>
+      <ul><li>MeitY-empanelled cloud</li><li>UPI payment aggregator, WhatsApp BSP</li><li>Aggregated data partners (toll, telecom) under MoU</li></ul>
+      <div class="grp">Ecosystem</div>
+      <ul><li>Hotel &amp; homestay associations, NRLM self-help groups</li><li>Taxi unions, guide associations</li><li>IHMs, IITTM, incubators, CSR partners</li></ul>
+    </div>
+    <div class="b ka"><h3><span class="num">7</span>Key Activities</h3>
+      <ul><li>Forecasting, D-CCI &amp; rebalancing model R&amp;D; seasonal retraining</li><li>ONDC, Bhashini, NIDHI, e-pass &amp; SACHET integrations</li><li>Host onboarding camps &amp; verification</li><li>Government pilots, case studies, certifications</li><li>Peak-season 24x7 monitoring, security &amp; DPDP compliance</li></ul>
+    </div>
+    <div class="b kr"><h3><span class="num">6</span>Key Resources</h3>
+      <ul><li>ML, data, full-stack, DevOps &amp; security team; tourism domain experts</li><li>IP: D-CCI method, capacity-aware twin rebalancer, destination-twin knowledge graph</li><li>Secure India-resident cloud, feature store, model registry</li><li>Seed funding &amp; working capital for government payment cycles</li></ul>
+    </div>
+    <div class="b vp"><h3><span class="num">2</span>Value Propositions</h3>
+      <div class="grp">Government</div>
+      <ul><li>7–14 days of early warning of peak crowds instead of same-day reaction</li><li>Transparent carrying-capacity method that supports court &amp; NGT directions</li><li>Weekly reports in ~10 min instead of ~2 days</li><li>Visitors are redirected, not turned away, so spending stays in the district</li></ul>
+      <div class="grp">Hotels &amp; homestays</div>
+      <ul><li>Listed in &lt; 10 min on WhatsApp, 22 languages</li><li>Single-digit fees vs 15–25% OTA commission</li><li>Demand outlook &amp; fair price advice; +10–15 pt off-season occupancy (target)</li></ul>
+      <div class="grp">Travellers</div>
+      <ul><li>Less crowded, better trips; verified stays &amp; fair prices; disaster alerts &amp; SOS, 24x7</li></ul>
+      <div class="grp">Differentiator</div>
+      <ul><li>Only closed loop of Predict → Measure → Redistribute, built on India's digital public infrastructure</li></ul>
+    </div>
+    <div class="b cr"><h3><span class="num">4</span>Customer Relationships</h3>
+      <ul><li>Dedicated state success manager; monthly reviews, quarterly outcome reports</li><li>SLA: 99.5% uptime, 1-hr critical response in peak season</li><li>Self-service PWA help + WhatsApp FAQ bot (multilingual)</li><li>Host champion community per valley</li><li>Green-points loyalty for off-peak travel</li></ul>
+    </div>
+    <div class="b ch"><h3><span class="num">3</span>Channels</h3>
+      <ul><li>District proof-of-concept via SIH follow-up &amp; state innovation cells</li><li>GeM listing; system integrator tenders</li><li>Traveller PWA + ONDC buyer apps + state portal widgets</li><li>E-pass integration: no slot → twin suggestion</li><li>Onboarding camps with district offices &amp; self-help groups</li><li>Travel creators, state tourism social handles, tourism marts</li></ul>
+    </div>
+    <div class="b cs"><h3><span class="num">1</span>Customer Segments</h3>
+      <div class="grp">Paying (B2G)</div>
+      <ul><li>State tourism departments &amp; corporations</li><li>District administrations / tourism councils</li><li>Ministry of Tourism (national dashboard)</li><li>Hill, pilgrimage &amp; heritage authorities</li></ul>
+      <div class="grp">Beneficiaries</div>
+      <ul><li>Hotel, homestay &amp; lodge MSMEs, including women-led &amp; self-help group enterprises</li><li>Domestic travellers (~2.5 bn visits a year)</li><li>Foreign tourists (~9.5 M a year)</li></ul>
+      <div class="grp">Secondary</div>
+      <ul><li>System integrators, ONDC network participants, training institutes, regulators</li></ul>
+    </div>
+    <div class="b co"><h3><span class="num">9</span>Cost Structure <span style="font-weight:400;text-transform:none;color:var(--muted);font-size:7pt">(district pilot, year 1)</span></h3>
+      <ul style="columns:2;column-gap:5mm"><li>Development, support &amp; maintenance: Rs 20–25 L</li><li>On-ground onboarding &amp; training: Rs 5–8 L</li><li>Cloud infrastructure: Rs 4–6 L</li><li>APIs, messaging &amp; payment fees: Rs 1–2 L</li><li>Security audit &amp; compliance: Rs 1–2 L</li><li><b>Total ≈ Rs 30–40 lakh</b>; multi-tenant platform gives economies of scale</li></ul>
+    </div>
+    <div class="b co2" style="background:var(--teal-l)"><h3 style="color:var(--teal)">Impact</h3>
+      <ul><li>SDG 8.9 · SDG 11 · SDG 12.b</li><li>Income spread to villages &amp; women-led stays</li><li>Less ecological stress on fragile hotspots</li></ul>
+    </div>
+    <div class="b rs"><h3><span class="num">5</span>Revenue Streams <span style="font-weight:400;text-transform:none;color:var(--muted);font-size:7pt">(indicative)</span></h3>
+      <ul style="columns:2;column-gap:5mm"><li>Government SaaS licence: Rs 25–40 L/yr per district cluster; Rs 1–3 Cr/yr state-wide</li><li>Implementation &amp; integration fees; training programmes; annual maintenance</li><li>Host freemium: free listing; single-digit ONDC transaction fee; premium analytics Rs 299–999/month</li><li>Anonymised insight reports for industry; white-label for private destinations; international expansion</li></ul>
+    </div>
+  </div>
+  <div class="foot"><span>PRAHARI · Business Model Canvas</span><span>3</span></div>
+</section>
+
+<!-- PAGE 4: ARCHITECTURE -->
+<section class="page">
+  <div class="hdr"><div><h2>3 · System <span class="k">Architecture</span></h2><p class="sub">Layered, event-driven microservices on an India-resident cloud, with open standards throughout (Beckn/ONDC, OpenAPI, CAP).</p></div><div class="tag"><b>PRAHARI</b><br>Technical Documentation</div></div>
+  <svg class="grow" viewBox="0 0 1080 610" width="100%" font-family="Inter, sans-serif">
+    <defs>
+      <marker id="a2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#5b6b7a"/></marker>
+    </defs>
+    <!-- layer labels -->
+    <g font-size="11" font-weight="700" fill="#5b6b7a" font-family="Poppins">
+      <text x="6" y="38">DATA SOURCES</text>
+      <text x="6" y="150">INGESTION &amp;</text><text x="6" y="164">DATA PLATFORM</text>
+      <text x="6" y="270">INTELLIGENCE</text><text x="6" y="284">LAYER</text>
+      <text x="6" y="392">TRANSACTION &amp;</text><text x="6" y="406">TRUST LAYER</text>
+      <text x="6" y="512">EXPERIENCE</text><text x="6" y="526">LAYER</text>
+    </g>
+    <!-- sources -->
+    <g font-size="10.5">
+      <g fill="#f5f8fb" stroke="#d5dde5">
+        <rect x="120" y="10" width="112" height="52" rx="7"/><rect x="240" y="10" width="112" height="52" rx="7"/><rect x="360" y="10" width="112" height="52" rx="7"/><rect x="480" y="10" width="112" height="52" rx="7"/><rect x="600" y="10" width="112" height="52" rx="7"/><rect x="720" y="10" width="112" height="52" rx="7"/><rect x="840" y="10" width="112" height="52" rx="7"/><rect x="960" y="10" width="112" height="52" rx="7"/>
+      </g>
+      <g text-anchor="middle" fill="#1c2733">
+        <text x="176" y="32" font-weight="600">E-pass / permits</text><text x="176" y="47" fill="#5b6b7a" font-size="9.5">Nilgiris, Rohtang</text>
+        <text x="296" y="32" font-weight="600">Hotel bookings</text><text x="296" y="47" fill="#5b6b7a" font-size="9.5">Setu · ONDC · NIDHI</text>
+        <text x="416" y="32" font-weight="600">Ticket &amp; footfall</text><text x="416" y="47" fill="#5b6b7a" font-size="9.5">ASI · state sites</text>
+        <text x="536" y="32" font-weight="600">IMD weather</text><text x="536" y="47" fill="#5b6b7a" font-size="9.5">+ SACHET CAP alerts</text>
+        <text x="656" y="32" font-weight="600">Calendars</text><text x="656" y="47" fill="#5b6b7a" font-size="9.5">holidays · events</text>
+        <text x="776" y="32" font-weight="600">Search trends</text><text x="776" y="47" fill="#5b6b7a" font-size="9.5">leading indicator</text>
+        <text x="896" y="32" font-weight="600">Aggregates (MoU)</text><text x="896" y="47" fill="#5b6b7a" font-size="9.5">toll · telecom</text>
+        <text x="1016" y="32" font-weight="600">Open data</text><text x="1016" y="47" fill="#5b6b7a" font-size="9.5">data.gov.in · OSM</text>
+      </g>
+    </g>
+    <path d="M596,64 L596,98" stroke="#5b6b7a" stroke-width="1.6" marker-end="url(#a2)"/>
+    <!-- ingestion -->
+    <rect x="120" y="102" width="952" height="80" rx="9" fill="#e3f3f2" stroke="#0e7c7b" stroke-width="1.4"/>
+    <g font-size="10.5" fill="#1c2733">
+      <rect x="134" y="114" width="210" height="56" rx="7" fill="#fff" stroke="#0e7c7b"/>
+      <text x="239" y="137" text-anchor="middle" font-weight="700" fill="#0e7c7b">Connectors + Kafka</text><text x="239" y="153" text-anchor="middle" font-size="9.5">Destination-Day schema, streams</text>
+      <rect x="356" y="114" width="210" height="56" rx="7" fill="#fff" stroke="#0e7c7b"/>
+      <text x="461" y="137" text-anchor="middle" font-weight="700" fill="#0e7c7b">Data lake (MinIO)</text><text x="461" y="153" text-anchor="middle" font-size="9.5">raw, immutable, auditable</text>
+      <rect x="578" y="114" width="232" height="56" rx="7" fill="#fff" stroke="#0e7c7b"/>
+      <text x="694" y="137" text-anchor="middle" font-weight="700" fill="#0e7c7b">PostgreSQL + PostGIS + Timescale</text><text x="694" y="153" text-anchor="middle" font-size="9.5">geo + time-series · H3 hex index</text>
+      <rect x="822" y="114" width="238" height="56" rx="7" fill="#fff" stroke="#0e7c7b"/>
+      <text x="941" y="137" text-anchor="middle" font-weight="700" fill="#0e7c7b">Feature store + MLflow</text><text x="941" y="153" text-anchor="middle" font-size="9.5">versioned features &amp; models</text>
+    </g>
+    <path d="M596,184 L596,218" stroke="#5b6b7a" stroke-width="1.6" marker-end="url(#a2)"/>
+    <!-- intelligence -->
+    <rect x="120" y="222" width="952" height="84" rx="9" fill="#0f2a44"/>
+    <g font-size="10.5">
+      <rect x="134" y="234" width="224" height="60" rx="7" fill="#12395c" stroke="#8fd3c7"/>
+      <text x="246" y="256" text-anchor="middle" font-weight="700" fill="#fff">PULSE · Forecasting</text><text x="246" y="272" text-anchor="middle" fill="#bcd3e6" font-size="9.5">LightGBM + TFT ensemble</text><text x="246" y="285" text-anchor="middle" fill="#bcd3e6" font-size="9.5">MinT hierarchical reconciliation</text>
+      <rect x="370" y="234" width="224" height="60" rx="7" fill="#12395c" stroke="#8fd3c7"/>
+      <text x="482" y="256" text-anchor="middle" font-weight="700" fill="#fff">D-CCI · Capacity</text><text x="482" y="272" text-anchor="middle" fill="#bcd3e6" font-size="9.5">Cifuentes PCC→RCC→ECC</text><text x="482" y="285" text-anchor="middle" fill="#bcd3e6" font-size="9.5">+ live daily correction factors</text>
+      <rect x="606" y="234" width="224" height="60" rx="7" fill="#12395c" stroke="#ffb46b"/>
+      <text x="718" y="256" text-anchor="middle" font-weight="700" fill="#fff">BALANCE · Rebalancer</text><text x="718" y="272" text-anchor="middle" fill="#bcd3e6" font-size="9.5">twin similarity + min-cost flow</text><text x="718" y="285" text-anchor="middle" fill="#bcd3e6" font-size="9.5">Thompson-sampling incentives</text>
+      <rect x="842" y="234" width="218" height="60" rx="7" fill="#12395c" stroke="#ffb46b"/>
+      <text x="951" y="256" text-anchor="middle" font-weight="700" fill="#fff">Pricing Advisor</text><text x="951" y="272" text-anchor="middle" fill="#bcd3e6" font-size="9.5">elasticity-aware rate bands</text><text x="951" y="285" text-anchor="middle" fill="#bcd3e6" font-size="9.5">anti-gouging guardrails</text>
+    </g>
+    <path d="M596,308 L596,342" stroke="#5b6b7a" stroke-width="1.6" marker-end="url(#a2)"/>
+    <!-- trust layer -->
+    <rect x="120" y="346" width="952" height="80" rx="9" fill="#fdf0e2" stroke="#e8811f" stroke-width="1.4"/>
+    <g font-size="10.5" text-anchor="middle">
+      <rect x="134" y="358" width="178" height="56" rx="7" fill="#fff" stroke="#e8811f"/><text x="223" y="381" font-weight="700" fill="#b85f0c">SETU onboarding</text><text x="223" y="397" font-size="9.5" fill="#1c2733">WhatsApp · Bhashini · AI listing</text>
+      <rect x="322" y="358" width="178" height="56" rx="7" fill="#fff" stroke="#e8811f"/><text x="411" y="381" font-weight="700" fill="#b85f0c">Verification</text><text x="411" y="397" font-size="9.5" fill="#1c2733">GSTIN/Udyam · NIDHI · DigiLocker</text>
+      <rect x="510" y="358" width="178" height="56" rx="7" fill="#fff" stroke="#e8811f"/><text x="599" y="381" font-weight="700" fill="#b85f0c">ONDC / Beckn adapter</text><text x="599" y="397" font-size="9.5" fill="#1c2733">search→confirm · UPI settle</text>
+      <rect x="698" y="358" width="178" height="56" rx="7" fill="#fff" stroke="#e8811f"/><text x="787" y="381" font-weight="700" fill="#b85f0c">KAVACH safety</text><text x="787" y="397" font-size="9.5" fill="#1c2733">SACHET/IMD · 112 · 1363</text>
+      <rect x="886" y="358" width="174" height="56" rx="7" fill="#fff" stroke="#e8811f"/><text x="973" y="381" font-weight="700" fill="#b85f0c">Trust &amp; fair price</text><text x="973" y="397" font-size="9.5" fill="#1c2733">reviews · registry · reports</text>
+    </g>
+    <path d="M596,428 L596,462" stroke="#5b6b7a" stroke-width="1.6" marker-end="url(#a2)"/>
+    <!-- experience -->
+    <g font-size="10.5" text-anchor="middle">
+      <rect x="120" y="466" width="230" height="70" rx="9" fill="#fff" stroke="#0f2a44" stroke-width="1.4"/><text x="235" y="492" font-weight="700" fill="#0f2a44" font-size="11.5">Traveller PWA</text><text x="235" y="509" font-size="9.5" fill="#5b6b7a">React · offline cache · voice</text><text x="235" y="523" font-size="9.5" fill="#5b6b7a">22 languages</text>
+      <rect x="360" y="466" width="230" height="70" rx="9" fill="#fff" stroke="#0f2a44" stroke-width="1.4"/><text x="475" y="492" font-weight="700" fill="#0f2a44" font-size="11.5">Host WhatsApp bot</text><text x="475" y="509" font-size="9.5" fill="#5b6b7a">onboarding · demand outlook</text><text x="475" y="523" font-size="9.5" fill="#5b6b7a">price tips · payouts</text>
+      <rect x="600" y="466" width="230" height="70" rx="9" fill="#fff" stroke="#0f2a44" stroke-width="1.4"/><text x="715" y="492" font-weight="700" fill="#0f2a44" font-size="11.5">DRISHTI dashboard</text><text x="715" y="509" font-size="9.5" fill="#5b6b7a">MapLibre + deck.gl heatmaps</text><text x="715" y="523" font-size="9.5" fill="#5b6b7a">what-if policy simulator</text>
+      <rect x="840" y="466" width="232" height="70" rx="9" fill="#fff" stroke="#0f2a44" stroke-width="1.4"/><text x="956" y="492" font-weight="700" fill="#0f2a44" font-size="11.5">Open APIs</text><text x="956" y="509" font-size="9.5" fill="#5b6b7a">ONDC buyer apps · state portals</text><text x="956" y="523" font-size="9.5" fill="#5b6b7a">police · transport · ULBs</text>
+    </g>
+    <!-- governance band -->
+    <rect x="120" y="552" width="952" height="44" rx="9" fill="#f5f8fb" stroke="#d5dde5"/>
+    <text x="596" y="572" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0f2a44">GOVERNANCE &amp; SECURITY (cross-cutting)</text>
+    <text x="596" y="587" text-anchor="middle" font-size="9.5" fill="#5b6b7a">Keycloak OIDC + RBAC · DPDP consent manager · TLS 1.3 / AES-256 · Vault secrets · WAF · audit logs · k-anonymity (k≥20) + differential privacy · CERT-In · India data residency</text>
+  </svg>
+  <div class="foot"><span>PRAHARI · System Architecture</span><span>4</span></div>
+</section>
+
+<!-- PAGE 5: ALGORITHMS & TECH -->
+<section class="page">
+  <div class="hdr"><div><h2>4 · Core Algorithms &amp; <span class="k">Technology Choices</span></h2><p class="sub">Input → Processing → Output: proven techniques combined in a new way, with every tool justified.</p></div><div class="tag"><b>PRAHARI</b><br>Technical Depth</div></div>
+  <div class="grid grow" style="grid-template-columns:1.12fr 1fr">
+    <div style="display:flex;flex-direction:column;gap:3mm">
+      <div class="card">
+        <h3>A. PULSE: multi-horizon demand forecasting</h3>
+        <ul class="small" style="margin-top:1.5mm">
+          <li><b>Features:</b> lags (1, 7, 14, 28, 364 days), rolling statistics, long-weekend flags, school-vacation overlap, festival &amp; event intensity, weather anomalies, search momentum, origin-city demand.</li>
+          <li><b>Models:</b> LightGBM (fast, SHAP-explainable) + Temporal Fusion Transformer (known-future inputs), with ETS/ARIMA fallbacks for sparse series.</li>
+          <li><b>Consistency:</b> MinT reconciliation across attraction → destination → district → state. <b>Cold start:</b> transfer from a cluster of similar destinations.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>B. D-CCI: dynamic carrying capacity &amp; status</h3>
+        <div class="formula" style="margin-top:1.5mm">
+          PCC = (A / a) × Rf <span class="c">  // area per visitor × daily rotations</span><br>
+          RCC = PCC × Π(1 − Cfᵢ) <span class="c">  // weather, landslide, roads, parking, water</span><br>
+          ECC = RCC × MC <span class="c">  // management capacity (staff, services)</span><br>
+          D-CCI(d,t) = ECC with Cfᵢ recomputed daily<br>
+          LR = Forecast(d,t) / D-CCI(d,t) → <span style="color:#6fe39a">G</span> &lt;0.8 · <span style="color:#ffd35a">A</span> 0.8–1 · <span style="color:#ff8a8a">R</span> &gt;1 · Black = hazard
+        </div>
+        <p class="xs" style="margin-top:1.2mm;color:var(--muted)">Based on Cifuentes (1992), extended from a one-time study into a live daily index.</p>
+      </div>
+      <div class="card">
+        <h3>C. BALANCE: capacity-constrained twin rebalancing</h3>
+        <ul class="small" style="margin-top:1.5mm">
+          <li><b>Twin candidates:</b> cosine similarity of attribute and description embeddings, with a travel-time penalty and spare-capacity filter.</li>
+          <li><b>Allocation:</b> min-cost flow (OR-Tools) sends overflow nudges without pushing any twin above <b>0.8 × its own D-CCI</b>, which prevents overflow cascades.</li>
+          <li><b>Incentives:</b> a contextual Thompson-sampling bandit learns which nudge (discount, free experience, priority slot, green points) works for which segment, within budget.</li>
+          <li><b>Fairness:</b> exposure is rotated among eligible small stays so large properties are not favoured.</li>
+        </ul>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:3mm">
+      <table class="kpi">
+        <tr><th style="width:27%">Layer</th><th style="width:33%">Choice</th><th>Why</th></tr>
+        <tr><td>Traveller app</td><td>React PWA (Vite, TS)</td><td>No install; works on low-end phones; offline cache in the mountains</td></tr>
+        <tr><td>Host channel</td><td>WhatsApp Cloud API</td><td>Hosts already use it daily; zero learning curve</td></tr>
+        <tr><td>Languages</td><td>Bhashini ASR/MT/TTS</td><td>22 scheduled languages; government platform</td></tr>
+        <tr><td>APIs</td><td>FastAPI (Python)</td><td>Async, OpenAPI docs, same language as the ML stack</td></tr>
+        <tr><td>Commerce</td><td>Beckn/ONDC adapter</td><td>Open network; single-digit fees; reaches all buyer apps</td></tr>
+        <tr><td>Streaming</td><td>Apache Kafka</td><td>Decouples permits and bookings from real-time consumers</td></tr>
+        <tr><td>Storage</td><td>PostGIS + TimescaleDB</td><td>Geo queries + fast time-series aggregation, open source</td></tr>
+        <tr><td>Spatial</td><td>Uber H3</td><td>Uniform hexagons for heatmaps and privacy thresholds</td></tr>
+        <tr><td>ML</td><td>LightGBM, PyTorch-Forecasting, OR-Tools</td><td>Accuracy + interpretability + optimisation</td></tr>
+        <tr><td>MLOps</td><td>MLflow, Evidently</td><td>Reproducible models; drift alerts each season</td></tr>
+        <tr><td>Dashboard</td><td>MapLibre + deck.gl</td><td>No map licence fees; renders thousands of hexagons</td></tr>
+        <tr><td>Infra</td><td>Docker, Kubernetes, MeitY cloud</td><td>Scales for peak season; India data residency</td></tr>
+      </table>
+      <div class="card" style="background:var(--teal-l);border-color:#b9e0dd">
+        <h3>Privacy &amp; responsible AI by design</h3>
+        <ul class="small" style="margin-top:1.3mm">
+          <li>No individual tracking. Crowd data is published only at H3 level with k ≥ 20 and differential-privacy noise.</li>
+          <li>DPDP Act 2023 consent, purpose limitation and erasure. SHAP explanations. Humans approve all policy actions.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>PRAHARI · Algorithms &amp; Technology</span><span>5</span></div>
+</section>
+
+<!-- PAGE 6: MARKET & COMPETITION -->
+<section class="page">
+  <div class="hdr"><div><h2>5 · Market &amp; <span class="k">Competitive Landscape</span></h2><p class="sub">Why PRAHARI is more than 30% better on the dimensions that matter to this Problem Statement.</p></div><div class="tag"><b>PRAHARI</b><br>Market Analysis</div></div>
+  <table class="cmp" style="margin-bottom:4mm">
+    <tr><th style="width:17%">Capability</th><th>OTAs<br><span style="font-weight:400">(MakeMyTrip, Booking, Airbnb)</span></th><th>Govt. tourism portals</th><th>E-pass / permit systems</th><th>Map &amp; traffic apps</th><th>AI trip planners / chatbots</th><th style="background:var(--teal)">PRAHARI</th></tr>
+    <tr><td>Forecasts demand days ahead</td><td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="p">Same-day</td><td class="n">✗</td><td class="y">✓ 1–30 days</td></tr>
+    <tr><td>Knows carrying capacity</td><td class="n">✗</td><td class="n">✗</td><td class="p">Fixed cap</td><td class="n">✗</td><td class="n">✗</td><td class="y">✓ Dynamic D-CCI</td></tr>
+    <tr><td>Redirects surplus demand</td><td class="n">✗</td><td class="n">✗</td><td class="n">✗ turns away</td><td class="p">Re-routes cars</td><td class="p">Unconstrained</td><td class="y">✓ Capacity-aware twins</td></tr>
+    <tr><td>Includes unlisted MSME stays</td><td class="p">15–25% fee</td><td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="y">✓ WhatsApp + ONDC</td></tr>
+    <tr><td>Local-language, voice-first</td><td class="p">Partial</td><td class="p">Partial</td><td class="p">Partial</td><td class="p">Partial</td><td class="p">Partial</td><td class="y">✓ 22 languages</td></tr>
+    <tr><td>Safety: alerts, SOS, fair price</td><td class="n">✗</td><td class="p">Helpline</td><td class="n">✗</td><td class="p">Traffic only</td><td class="n">✗</td><td class="y">✓ SACHET, 112, 1363</td></tr>
+    <tr><td>Policy tools for government</td><td class="n">✗</td><td class="n">✗</td><td class="p">Quota only</td><td class="n">✗</td><td class="n">✗</td><td class="y">✓ What-if simulator</td></tr>
+  </table>
+  <div class="grid grow" style="grid-template-columns:1fr 1fr 1fr">
+    <div class="card">
+      <h3>Market opportunity</h3>
+      <ul class="small" style="margin-top:1.5mm">
+        <li><b>B2G:</b> 36 states and UTs, 780+ districts; 57 Swadesh Darshan 2.0 destinations; 40 SASCI iconic-centre projects; the Budget 2025-26 plan to develop 50 top destinations.</li>
+        <li><b>Hosts:</b> the large, unorganised base of small hotels, lodges and homestays, with branded inventory under 2 lakh rooms. Homestays have MUDRA-loan support in Budget 2025-26.</li>
+        <li><b>Travellers:</b> ~2.5 billion domestic visits and ~9.5 million foreign arrivals a year.</li>
+      </ul>
+      <h3 style="margin-top:2.5mm">Beachhead market</h3>
+      <ul class="small" style="margin-top:1.2mm">
+        <li>Hill-station and pilgrimage clusters where courts and regulators already require capacity controls: Kullu-Manali, the Nilgiris (Ooty, Kodaikanal), Mussoorie, Darjeeling and the Char Dham routes.</li>
+        <li>These buyers already feel the pain and have budgets, so they are the fastest path to a paid pilot.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Target-user research plan</h3>
+      <ul class="small" style="margin-top:1.5mm">
+        <li><b>Hosts (n ≥ 50):</b> occupancy by month, OTA use and commission, WhatsApp usage, language, willingness to pay.</li>
+        <li><b>Travellers (n ≥ 200):</b> would you switch to a quieter twin? Which incentive works? What is your trust threshold?</li>
+        <li><b>Officials (5–8 interviews):</b> DTOs and state tourism IT on data gaps, e-pass pain points and procurement route.</li>
+        <li>Results feed the incentive-bandit priors and UX decisions before the pilot.</li>
+      </ul>
+      <h3 style="margin-top:2.5mm">Validation metrics</h3>
+      <ul class="small" style="margin-top:1.2mm">
+        <li>Share of travellers who accept a twin suggestion (target ≥ 10%).</li>
+        <li>Host activation: listing completed within 10 minutes (target ≥ 70%).</li>
+        <li>Officials: weekly dashboard use and forecast-versus-actual accuracy.</li>
+      </ul>
+    </div>
+    <div class="card" style="background:var(--saffron-l);border-color:#f3d2ae">
+      <h3>Defensible advantages</h3>
+      <ul class="small" style="margin-top:1.5mm">
+        <li>D-CCI scoring method and capacity-aware rebalancer (patent potential).</li>
+        <li>Destination-twin knowledge graph for India.</li>
+        <li>Deep integration with ONDC, Bhashini, NIDHI, SACHET, 112 and 1363.</li>
+        <li><b>Data network effect:</b> every host and every season improves forecasts and recommendations.</li>
+        <li>Open standards, so states adopt without lock-in, which makes PRAHARI a candidate for tourism Digital Public Infrastructure.</li>
+      </ul>
+      <h3 style="margin-top:2.5mm">Why now</h3>
+      <ul class="small" style="margin-top:1.2mm">
+        <li>ONDC, Bhashini and UPI are mature enough to build on.</li>
+        <li>Budget 2025-26 destination development and SASCI investments need outcome tracking.</li>
+        <li>Climate extremes make early warning a necessity.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot"><span>PRAHARI · Market &amp; Competition</span><span>6</span></div>
+</section>
+
+<!-- PAGE 7: IMPACT, ROI, ROADMAP -->
+<section class="page">
+  <div class="hdr"><div><h2>6 · Impact, Cost-Benefit &amp; <span class="k">Roadmap</span></h2><p class="sub">Pilot KPIs are targets to be validated in the field; financials are indicative estimates.</p></div><div class="tag"><b>PRAHARI</b><br>Impact Assessment</div></div>
+  <div class="grid" style="grid-template-columns:1.2fr 1fr;margin-bottom:3.5mm">
+    <table class="kpi">
+      <tr><th style="width:36%">Metric</th><th style="width:30%">Today</th><th>With PRAHARI (pilot target)</th></tr>
+      <tr><td>Advance warning of peak crowd</td><td>Same day / reactive</td><td><b>7–14 days</b></td></tr>
+      <tr><td>7-day footfall forecast error</td><td>No forecast</td><td><b>MAPE ≤ 15%</b></td></tr>
+      <tr><td>Peak overflow redirected to twins</td><td>0% (turned away)</td><td><b>10–15%</b></td></tr>
+      <tr><td>Off-season occupancy of onboarded MSME stays</td><td>Baseline</td><td><b>+10–15 percentage points</b></td></tr>
+      <tr><td>Distribution cost for hosts</td><td>15–25% OTA commission</td><td><b>Single-digit % via ONDC</b></td></tr>
+      <tr><td>Host onboarding time</td><td>Days</td><td><b>&lt; 10 minutes</b> (WhatsApp)</td></tr>
+      <tr><td>Disaster alert reach to tourists</td><td>Ad hoc</td><td><b>&lt; 5 minutes</b> from SACHET alert</td></tr>
+      <tr><td>Weekly destination report</td><td>~2 days manual</td><td><b>~10 minutes</b> automated</td></tr>
+    </table>
+    <div style="display:flex;flex-direction:column;gap:3mm">
+      <div class="card">
+        <h3>ROI for a district pilot (illustrative)</h3>
+        <svg viewBox="0 0 400 128" width="100%" style="margin-top:1mm" font-family="Inter, sans-serif">
+          <text x="0" y="16" font-size="10.5" fill="#1c2733">Pilot cost (year 1)</text>
+          <rect x="150" y="5" width="23" height="16" rx="3" fill="#5b6b7a"/>
+          <text x="180" y="17" font-size="10.5" font-weight="700" fill="#1c2733">≈ Rs 0.35 Cr</text>
+          <text x="0" y="48" font-size="10.5" fill="#1c2733">Spending retained,</text>
+          <text x="0" y="61" font-size="10.5" fill="#1c2733">2 peak weekends</text>
+          <rect x="150" y="40" width="240" height="16" rx="3" fill="#0e7c7b"/>
+          <text x="382" y="52" font-size="10.5" font-weight="700" fill="#fff" text-anchor="end">≈ Rs 4 Cr (10×+)</text>
+          <text x="0" y="96" font-size="10.5" fill="#1c2733">Host savings per</text>
+          <text x="0" y="109" font-size="10.5" fill="#1c2733">Rs 2,000 room-night</text>
+          <rect x="150" y="88" width="120" height="16" rx="3" fill="#e8811f"/>
+          <text x="278" y="100" font-size="10.5" font-weight="700" fill="#1c2733">Rs 200–400</text>
+        </svg>
+        <p class="xs" style="color:var(--muted);margin-top:1mm">Assumption: 1 lakh peak-weekend visitors × Rs 4,000 spend = Rs 40 Cr at stake. Retaining 5% gives ≈ Rs 2 Cr per weekend. Excludes GST, off-season gains and avoided rescue costs.</p>
+      </div>
+    </div>
+  </div>
+  <h3 style="margin-bottom:2mm">Scaling roadmap: prototype to national Digital Public Infrastructure</h3>
+  <div class="road" style="margin-bottom:2.5mm">
+    <div class="r"><i>HACKATHON · 36 h</i><b>Working prototype</b><p>Kullu-Manali + 4 twins; PWA, WhatsApp bot, forecasting, rebalancer, dashboard; public + simulated data.</p></div>
+    <div class="r"><i>MONTHS 0–9</i><b>District pilot</b><p>MoU with Kullu / Nilgiris; ONDC certification; 300–500 MSME stays; measured KPIs and a published case study.</p></div>
+    <div class="r"><i>MONTHS 9–18</i><b>State rollout</b><p>3–5 states as SaaS tenants; e-pass and state portal integration; guides, taxis and experiences added.</p></div>
+    <div class="r"><i>MONTHS 18–36</i><b>National scale</b><p>All priority destinations; industry APIs; tourism Digital Public Infrastructure; South Asia and ASEAN expansion.</p></div>
+  </div>
+  <div class="grid" style="grid-template-columns:repeat(4,1fr);gap:2.5mm">
+    <div class="stat"><div class="n" style="font-size:12.5pt">SDG 8.9</div><div class="l">Sustainable tourism that creates local jobs</div></div>
+    <div class="stat"><div class="n" style="font-size:12.5pt">SDG 11</div><div class="l">Safer, less congested towns</div></div>
+    <div class="stat"><div class="n" style="font-size:12.5pt">SDG 12.b</div><div class="l">Tools to monitor the impact of sustainable tourism</div></div>
+    <div class="stat" style="border-left-color:var(--saffron)"><div class="n" style="font-size:12.5pt">Viksit Bharat</div><div class="l">Dekho Apna Desh · Swadesh Darshan 2.0 · Digital India</div></div>
+  </div>
+  <table class="kpi tight" style="margin-top:2.5mm">
+    <tr><th style="width:15%">Stakeholder</th><th style="width:28%">Economic benefit</th><th style="width:29%">Social / experience benefit</th><th>Long-term benefit</th></tr>
+    <tr><td><b>Travellers</b></td><td>Incentives on twins; fair, transparent prices</td><td>Less crowding, safer trips, local-language help</td><td>Discovery of new destinations; loyalty rewards</td></tr>
+    <tr><td><b>Hotels &amp; homestays</b></td><td>Higher occupancy; lower commission; better pricing</td><td>Digital inclusion for rural &amp; women-led stays</td><td>Stable year-round income; access to MUDRA credit through booking history</td></tr>
+    <tr><td><b>Governments</b></td><td>Retained spending &amp; GST; lower rescue costs</td><td>Higher visitor &amp; resident satisfaction</td><td>Evidence-based planning of infrastructure and schemes</td></tr>
+    <tr><td><b>Environment &amp; communities</b></td><td>Income spread across villages</td><td>Less congestion, water &amp; waste stress</td><td>Longer destination life cycle; protected fragile ecosystems</td></tr>
+  </table>
+  <div class="foot"><span>PRAHARI · Impact &amp; Roadmap</span><span>7</span></div>
+</section>
+
+<!-- PAGE 8: BUILD PLAN, RISKS, REFERENCES -->
+<section class="page">
+  <div class="hdr"><div><h2>7 · 36-Hour Build Plan, Risks &amp; <span class="k">References</span></h2><p class="sub">A realistic scope, pre-built foundations and offline fallbacks make the demo robust.</p></div><div class="tag"><b>PRAHARI</b><br>Feasibility</div></div>
+  <div class="tl" style="margin-bottom:3.5mm">
+    <div class="s"><b>0–4 h</b><span>Scope lock (Kullu-Manali + 4 twins); load datasets; repo, CI, Docker Compose</span></div>
+    <div class="s"><b>4–12 h</b><span>Pulse pipeline (LightGBM + TFT), D-CCI calculator, core APIs; PWA screens; dashboard layout</span></div>
+    <div class="s"><b>12–20 h</b><span>Twin similarity + min-cost flow; WhatsApp bot; Bhashini; ONDC sandbox flow</span></div>
+    <div class="s"><b>20–28 h</b><span>Kavach alerts + SOS mock; pricing advisor; what-if simulator; end-to-end tests</span></div>
+    <div class="s"><b>28–32 h</b><span>Auth + RBAC hardening; load tests; MAPE on hold-out; bug fixes</span></div>
+    <div class="s"><b>32–36 h</b><span>Demo polish; backup video; pitch rehearsal; Q&amp;A sheet; documentation</span></div>
+  </div>
+  <div class="grid grow" style="grid-template-columns:1fr 1.15fr">
+    <div class="card">
+      <h3>Team of 6 &amp; key risks</h3>
+      <p class="xs" style="margin-top:1.2mm"><b>Roles:</b> ML lead · Data engineer · Backend &amp; integration · Frontend/PWA · Dashboard &amp; UX · Domain research, testing &amp; pitch</p>
+      <table class="kpi" style="margin-top:2mm">
+        <tr><th style="width:36%">Risk</th><th>Mitigation</th></tr>
+        <tr><td>Sparse footfall data</td><td>Proxy signals, cold-start transfer, state data MoUs</td></tr>
+        <tr><td>Host adoption</td><td>WhatsApp and language-first design, zero joining fee, camps with self-help groups</td></tr>
+        <tr><td>Travellers ignore nudges</td><td>Learned incentives, honest delay estimates, e-pass twin offers</td></tr>
+        <tr><td>Overflow cascade to villages</td><td>Hard cap at 0.8 × twin D-CCI; community consent</td></tr>
+        <tr><td>API dependency</td><td>Modular adapters, cached fallbacks, early ONDC and Ministry of Tourism engagement</td></tr>
+        <tr><td>Privacy</td><td>Aggregate-only data, DPDP consent, independent audits</td></tr>
+      </table>
+      <h3 style="margin-top:3mm">Done before the finale (de-risking)</h3>
+      <ul class="small" style="margin-top:1.2mm">
+        <li>Cleaned datasets and feature pipeline; LightGBM baseline with hold-out MAPE.</li>
+        <li>Twin-destination attribute sheet for the pilot cluster; UI component library.</li>
+        <li>Sandbox access tested (ONDC, Bhashini, WhatsApp, UPI) with cached fallback responses.</li>
+        <li>Backup demo video recorded, so a failed network cannot fail the demo.</li>
+      </ul>
+    </div>
+    <div class="card" style="background:#fff">
+      <h3>References</h3>
+      <ol class="ref" style="padding-left:4.5mm;margin-top:1.5mm">
+        <li>Ministry of Tourism, Government of India. <i>India Tourism Statistics 2024</i>; Tourism Satellite Account of India.</li>
+        <li>Song, H. &amp; Li, G. (2008). Tourism demand modelling and forecasting: A review of recent research. <i>Tourism Management</i>, 29(2).</li>
+        <li>Bangwayo-Skeete, P. &amp; Skeete, R. (2015). Can Google data improve the forecasting performance of tourist arrivals? <i>Tourism Management</i>, 46.</li>
+        <li>Li, X., Pan, B., Law, R. &amp; Huang, X. (2017). Forecasting tourism demand with composite search index. <i>Tourism Management</i>, 59.</li>
+        <li>Law, R., Li, G., Fong, D. &amp; Han, X. (2019). Tourism demand forecasting: A deep learning approach. <i>Annals of Tourism Research</i>, 75.</li>
+        <li>Lim, B., Arık, S., Loeff, N. &amp; Pfister, T. (2021). Temporal Fusion Transformers for interpretable multi-horizon time series forecasting. <i>Int. J. of Forecasting</i>, 37(4).</li>
+        <li>Wickramasuriya, S., Athanasopoulos, G. &amp; Hyndman, R. (2019). Optimal forecast reconciliation through trace minimization. <i>JASA</i>, 114(526).</li>
+        <li>Cifuentes, M. (1992). <i>Determinación de capacidad de carga turística en áreas protegidas</i>. CATIE, Costa Rica.</li>
+        <li>Butler, R. (1980). The concept of a tourist area cycle of evolution. <i>Canadian Geographer</i>, 24(1). · Doxey, G. (1975). Irridex model.</li>
+        <li>UNWTO (2018). <i>'Overtourism'? Understanding and Managing Urban Tourism Growth beyond Perceptions</i>.</li>
+        <li>Agrawal, S. &amp; Goyal, N. (2012). Analysis of Thompson Sampling for the multi-armed bandit problem. <i>COLT</i>.</li>
+        <li>Government of India: Digital Personal Data Protection Act 2023; ONDC, Bhashini, NDMA SACHET and NIDHI public documentation.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="foot"><span>PRAHARI · Feasibility &amp; References</span><span>8</span></div>
+</section>
+
+</body>
+</html>

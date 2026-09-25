@@ -1,0 +1,404 @@
+# PRAHARI: AI Demand Forecasting & Crowd Rebalancing to Boost Hotels, Homestays and Travel in India
+
+Problem Statement: Student Innovation (Theme: Travel & Tourism). A solution or idea that can boost the current situation of the tourism industry, including hotels, travel and others.
+
+PRAHARI = Predictive Routing & AI for Hotels, Attractions, Regions & Itineraries
+
+## SECTION 1: PROBLEM ANALYSIS
+
+### 1.1 The current situation in numbers
+
+Tourism is one of India's largest employers and a major earner of foreign exchange, but the benefits are spread very unevenly. Too many visitors go to a few places on a few dates, and thousands of other destinations and small businesses stay underused for most of the year.
+
+- Scale of demand: According to India Tourism Statistics 2024 (Ministry of Tourism), India recorded about 2,509 million domestic tourist visits in 2023, which makes it one of the largest domestic tourism markets in the world.
+- International recovery is incomplete: Foreign Tourist Arrivals (FTAs) were about 9.52 million in 2023, still below the pre-pandemic peak of about 10.93 million in 2019. India's share of global international arrivals remains below 2%, even though the country has more than 40 UNESCO World Heritage Sites.
+- Economic weight: The Tourism Satellite Account puts tourism at roughly 5% of India's GDP. The Ministry of Tourism estimates that tourism supports about 7.6 crore direct and indirect jobs, many of them in hill, coastal, pilgrimage and rural economies where alternative jobs are few.
+- Foreign exchange: Foreign Exchange Earnings from tourism were about Rs 2.3 lakh crore in 2023 (India Tourism Statistics 2024).
+
+### 1.2 The core pain points: a mismatch problem, not a shortage problem
+
+India has enough attractions and enough beds. What it lacks is a way to match demand with capacity in time. We identify five pain points that current solutions do not address.
+
+Pain point 1: Overcrowding at hotspots on peak days (overtourism)
+- Hill stations, pilgrimage sites and weekend getaways get extreme crowds on long weekends, school holidays and festivals. Traffic jams of many hours on the Manali and Shimla highways, water and waste stress in the Himalayan towns, and crowd-safety incidents at pilgrimage sites are reported every season.
+- Courts and regulators have had to step in after the fact. The Madras High Court ordered an e-pass system for Ooty and Kodaikanal from May 2024. The National Green Tribunal imposed vehicle permit caps for Rohtang Pass. The Supreme Court has examined the need for carrying-capacity assessments of hill towns in the Indian Himalayan Region. These measures restrict visitors but do not redirect them. Tourists are turned away and money leaves the region.
+
+Pain point 2: Empty rooms everywhere else (underutilisation)
+- A few kilometres from every overcrowded hotspot there are valleys, villages, heritage towns and homestays with empty rooms. A traveller stuck in Manali traffic on a Saturday could have had a better holiday in Tirthan, Jibhi, Barot or Shoja, but has no trusted, timely information about them.
+- Small hotels, lodges, dharamshalas and homestays make up most of India's accommodation stock. Branded hotel inventory is estimated at under 2 lakh rooms. These small operators have strong seasonal swings, with low off-season occupancy that threatens their survival.
+
+Pain point 3: Small operators are digitally invisible or pay high commissions
+- Most MSME stays are not listed online, or they depend on Online Travel Agencies (OTAs) that charge commissions typically in the 15% to 25% range and control pricing, visibility and customer data.
+- Owners in rural and tribal areas face language barriers (English-first platforms), complicated onboarding, and no access to demand information. They set prices by guesswork, undercharging in peak season and sitting empty in the off-season.
+
+Pain point 4: Destination managers decide without data
+- District Tourism Officers, State Tourism Departments and local bodies usually see tourist numbers months later through annual surveys and hotel registers. They cannot forecast next weekend's crowd, simulate the effect of a permit quota, or know which nearby destination has spare capacity.
+- Infrastructure (parking, water, waste, police, medical) is planned for averages, but the crisis always happens on peak days.
+
+Pain point 5: Traveller trust and safety gaps
+- Tourists, especially first-time, solo, women and foreign travellers, worry about overcharging by taxis and guides, fake listings, unsafe accommodation and sudden weather disasters. Monsoon floods and landslides in Himachal Pradesh and Uttarakhand have repeatedly stranded thousands of tourists who had no early warning.
+- Negative experiences spread quickly on social media and damage the destination's brand.
+
+### 1.3 Who suffers and how (stakeholder impact)
+
+- Travellers lose time in traffic and queues, pay surge prices, face safety risks and have a poorer experience.
+- Hotel, homestay and MSME owners (the main focus of this Problem Statement) lose revenue in the off-season, pay high commissions, and cannot plan staffing or inventory.
+- Local communities bear the costs (congestion, waste, water shortage, inflation) without a fair share of the benefits. Resentment rises, as Doxey's Irridex model predicts.
+- Governments lose tax revenue, carry the burden of rescues and emergency management, and see destination brands decline. Butler's Tourism Area Life Cycle shows that unmanaged over-use pushes destinations into decline.
+- The environment suffers when fragile Himalayan, coastal and forest ecosystems are pushed beyond their carrying capacity.
+
+### 1.4 Existing solutions and why they fall short
+
+- OTAs and booking apps (MakeMyTrip, Booking.com, Airbnb and others) optimise individual transactions. They have no mandate to balance destinations, respect carrying capacity or lift unlisted rural stays, and their commission model excludes the smallest operators.
+- Government information portals (Incredible India, state tourism sites) provide excellent content but are static. They do not show live crowding, forecasts or availability.
+- E-pass and permit systems (Ooty-Kodaikanal e-pass, Rohtang permits, pilgrimage registrations) are reactive gatekeeping. They cap numbers but do not predict demand in advance or redirect rejected visitors to alternatives, so the economic value is lost.
+- Map apps (live traffic, "popular times") show congestion only after it happens and do not link to hotel inventory, capacity limits or policy.
+- Stand-alone chatbots and itinerary planners generate suggestions without real capacity data, and often send everyone to the same "top 10" places, which makes crowding worse.
+
+The missing piece is a closed loop that predicts demand, measures each destination's live capacity, and actively redistributes travellers and revenue to places that have room. PRAHARI is designed to be that loop.
+
+### 1.5 Alignment with national priorities
+
+- Swadesh Darshan 2.0 (sustainable, destination-centric development of 57 identified destinations) and Challenge Based Destination Development.
+- Special Assistance to States for Capital Investment (SASCI) for developing iconic tourist centres to global scale: about Rs 3,295 crore sanctioned for 40 projects across 23 states in 2024-25.
+- Union Budget 2025-26: development of top 50 destinations in partnership with states, MUDRA loans for homestays, and easier e-visa access.
+- Dekho Apna Desh, Vibrant Villages Programme, Digital India, ONDC, Bhashini, and the National Strategy for Sustainable Tourism.
+- NIDHI (National Integrated Database of Hospitality Industry) and the 24x7 multilingual Incredible India helpline 1363.
+- Sustainable Development Goals: SDG 8 (decent work and economic growth, target 8.9 on sustainable tourism), SDG 11 (sustainable cities and communities) and SDG 12 (responsible consumption, target 12.b on monitoring sustainable tourism).
+
+The urgency is clear. With domestic travel growing quickly and climate extremes increasing, India needs predictive, data-driven destination management now, before more hotspots cross their ecological and social tipping points.
+
+## SECTION 2: PROPOSED SOLUTION AND INNOVATION
+
+### 2.1 Unique value proposition in one sentence
+
+PRAHARI forecasts where and when tourists will go, compares that forecast with each destination's live carrying capacity, and redirects surplus demand, with personalised incentives, to nearby "twin" destinations and small hotels that have room. Overcrowding becomes extra revenue for local businesses.
+
+Our tagline is: Predict. Protect. Redistribute.
+
+### 2.2 The core innovation: what makes PRAHARI different
+
+Existing tools do one of three things in isolation: sell rooms (OTAs), give information (portals), or restrict entry (permits). PRAHARI connects all three in one closed feedback loop.
+
+1. Predict: A hierarchical AI forecasting engine estimates tourist footfall and hotel occupancy for every destination 1 to 30 days ahead. It combines booking signals, search trends, weather, holidays, festivals and events.
+2. Measure: A Dynamic Carrying Capacity Index (D-CCI) turns fixed, one-time carrying-capacity studies into a live number. The base capacity is adjusted daily for weather, road status, water supply, parking and events.
+3. Redistribute: When forecast demand exceeds D-CCI, the Twin-Destination Rebalancer recommends comparable nearby alternatives. It uses capacity-constrained optimisation so the crowd is not simply shifted to a new hotspot, and it learns which incentive (discount, free experience, priority entry slot, green points) actually changes traveller decisions.
+4. Include: Small hotels and homestays are onboarded in their own language through WhatsApp or voice in under 10 minutes and distributed through the government-backed Open Network for Digital Commerce (ONDC) at far lower cost than OTA commissions.
+5. Protect: Every recommendation passes through a trust and safety layer: verified providers, a fair-price registry, disaster alerts and SOS integration.
+
+We estimate this closed loop makes PRAHARI more than 30% better than existing approaches on three axes that matter to the Problem Statement:
+- Timeliness: it acts days before the crowd forms, while permits and map apps act on the day or after.
+- Economic retention: visitors diverted from a full hotspot are kept within the regional economy instead of being turned away.
+- Inclusion: it reaches unlisted MSME stays at single-digit distribution cost instead of 15% to 25%.
+
+### 2.3 Five key features, each linked to the Problem Statement
+
+Feature 1: PRAHARI Pulse, the tourism demand forecasting engine
+- Forecasts daily footfall, hotel occupancy and traffic load for each destination, with 7, 14 and 30-day horizons and confidence bands.
+- Hierarchical forecasts (attraction, destination, district, state) are reconciled so that numbers add up consistently for every level of government.
+- Explains its forecasts, for example "Expected +42% versus a normal weekend, driven by the long weekend (Independence Day) and a clear weather forecast".
+- PS link: gives hotels and travel operators advance visibility to plan pricing, staffing and inventory. This directly boosts hotel revenue management.
+
+Feature 2: PRAHARI Balance, the Dynamic Carrying Capacity Index and Twin-Destination Rebalancer
+- Computes D-CCI for each destination from physical, infrastructural, ecological and social limits, with live correction factors.
+- Colour-coded status: Green (comfortable), Amber (busy), Red (over capacity), Black (unsafe or closed).
+- When a destination is forecast to turn Red, it proactively suggests similar twins (for example Manali to Tirthan, Jibhi, Barot or Shoja; Ooty to Kotagiri or Coonoor; Goa beaches to Gokarna or Devbagh) with travel time, availability and an incentive.
+- PS link: turns overflow demand into bookings for under-used hotels and travel services instead of lost trips.
+
+Feature 3: PRAHARI Setu, the MSME hotel and homestay onboarding and distribution bridge
+- WhatsApp and voice-first onboarding in 22 Indian languages through Bhashini. The owner sends photos and a voice note, and PRAHARI drafts a listing (room types, amenities, house rules) for the owner to approve.
+- Verification through GSTIN or Udyam, NIDHI registration and DigiLocker, with a physical verification option through local tourism officers.
+- Listings are published once and made discoverable across ONDC buyer apps. Payments go through UPI.
+- A Fair Dynamic Pricing Advisor recommends room rates from PRAHARI Pulse forecasts, with anti-gouging guardrails during emergencies.
+- PS link: brings small hotels and homestays into the digital economy and raises their occupancy and margins.
+
+Feature 4: PRAHARI Kavach, the traveller trust and safety shield
+- Verified-provider badges for stays, taxis and guides (including Incredible India Tourist Facilitators).
+- A fair-price registry of approved local taxi and guide rates, with one-tap overcharging reports routed to district authorities.
+- Location-based disaster and weather alerts from NDMA's SACHET Common Alerting Protocol feed and IMD, with automatic re-routing suggestions.
+- An SOS button that shares location with the 112 Emergency Response Support System and connects to the 1363 tourist helpline.
+- PS link: trust is the currency of travel. A safer, fairer experience means more repeat visits and positive word of mouth.
+
+Feature 5: PRAHARI Drishti, the destination command dashboard for governments
+- A live map of footfall, forecasts, D-CCI status, hotel availability and incidents, from state level down to individual attractions.
+- A "what-if" policy simulator, for example: "If Rohtang permits are capped at N per day, how many visitors shift to twins and how much revenue stays in the district?"
+- Automated reports for Swadesh Darshan 2.0, SASCI and Budget-destination monitoring, plus infrastructure alerts (extra buses, police, sanitation) ahead of peak days.
+- PS link: enables evidence-based destination management that grows tourism sustainably.
+
+### 2.4 User journeys (step by step)
+
+Journey A: Priya, a traveller from Delhi planning a long weekend
+1. Priya opens PRAHARI (a web app with no install needed, or through a partner ONDC buyer app) and searches for "Manali, 15-17 August".
+2. PRAHARI Pulse shows Manali forecast as Red: "Expected 2.1x normal crowd, 5 to 7 hour traffic delays likely, 94% of rooms booked."
+3. PRAHARI Balance suggests "Try Tirthan Valley: similar mountains and rivers, 3 hours closer, Green status, 38 verified homestays available, 15% off plus a free trout-farm experience."
+4. Priya compares prices, reads verified reviews, and books a homestay through ONDC with UPI in two minutes.
+5. On the drive, Kavach sends a SACHET landslide alert for one road segment and suggests a safer route. At her stay she sees fair taxi rates for local sightseeing.
+6. After the trip she rates the stay. Her feedback trains the recommendation model and improves the host's trust score.
+
+Journey B: Ramesh, a homestay owner in Tirthan Valley
+1. Ramesh sends "Namaste" to the PRAHARI WhatsApp number. The bot replies in Hindi and asks for photos, room details and his Udyam or GST number.
+2. He sends 8 photos and a 60-second voice note. PRAHARI drafts a listing in Hindi and English, and he approves it in one tap.
+3. His rooms become discoverable on ONDC. Every Monday he gets a WhatsApp demand outlook: "Next weekend demand in your area: High. Suggested price: Rs 2,400 per night (current Rs 1,800)."
+4. When Manali is forecast to be Red, his homestay is automatically included in twin recommendations. He gets bookings he would never have received before.
+5. He pays a single-digit percentage fee instead of an OTA commission, and payments settle directly by UPI.
+
+Journey C: The District Tourism Officer, Kullu
+1. On Monday morning the Drishti dashboard shows that Saturday's forecast for Solang and Rohtang is 180% of D-CCI.
+2. The officer simulates a permit cap and a twin-incentive campaign. The model shows 22% of overflow moving to Tirthan, Jibhi and Barot and about Rs 1.4 crore of spending retained in the district for the weekend. (These are illustrative simulation outputs for the pilot.)
+3. The officer approves the campaign. PRAHARI pushes incentives to travellers, alerts the police and transport departments about expected traffic, and schedules extra waste collection.
+4. After the weekend, an automatic report compares forecast with actual and shows the impact of the campaign.
+
+Journey D: Kenji, a foreign tourist in Varanasi
+- Kenji uses PRAHARI in Japanese through translation, sees fair boat and auto-rickshaw fares at the ghats, gets crowd forecasts for the Ganga Aarti, and receives a gentle suggestion to visit Sarnath in the morning when it is quieter. The SOS button connects him to 1363 with language support.
+
+### 2.5 Integration with existing systems and processes
+
+PRAHARI is built to strengthen government systems, not duplicate them.
+- ONDC (Beckn protocol): PRAHARI Setu acts as a seller-side network participant for hospitality and local mobility, so listings reach every ONDC buyer app.
+- NIDHI: accommodation verification, and data exchange for official statistics.
+- E-pass and permit systems (for example the Nilgiris e-pass, Rohtang permits and pilgrimage registrations): PRAHARI uses permit counts as live demand signals and suggests twins to applicants who get no slot.
+- Incredible India Content Hub and state portals: destination content, images and stories for the twins.
+- Bhashini for translation and speech, UPI for payment, DigiLocker for identity documents, 112 ERSS and 1363 for emergencies, IMD and NDMA SACHET for alerts, and data.gov.in open datasets.
+
+### 2.6 Scalability: from prototype to national implementation
+
+- Phase 1 (hackathon prototype): one cluster (Kullu-Manali with 4 twin destinations), using public data, simulated hotel data and a working web app, WhatsApp bot and dashboard.
+- Phase 2 (pilot, 6 months): two real clusters, Kullu-Manali (Himachal Pradesh) and the Nilgiris (Tamil Nadu), with 300 to 500 onboarded MSME stays, the district tourism office and the existing e-pass system.
+- Phase 3 (state rollout, 12 to 18 months): all major circuits in 3 to 5 states, integrated with state tourism portals and ONDC.
+- Phase 4 (national): a shared national platform offered as Digital Public Infrastructure for tourism. Every Swadesh Darshan 2.0, SASCI and Budget-listed destination has a PRAHARI profile, and states onboard as tenants on a common, cloud-native, multi-tenant architecture.
+
+### 2.7 Specific use cases and scenarios
+
+- Long-weekend hill-station overflow: Manali to Tirthan, Jibhi or Barot. Shimla to Chail or Narkanda. Mussoorie to Chakrata or Dhanaulti.
+- Pilgrimage crowd management: forecast-based slot guidance for temple towns, and alternative darshan times and nearby heritage sites to reduce waiting and crowd-crush risk.
+- Beach seasonality: Goa peak season to Gokarna, Devbagh or Tarkarli, and off-season demand stimulation for coastal homestays through targeted offers.
+- Heritage monuments: time-slot recommendations at the Taj Mahal and alternatives such as Fatehpur Sikri, Mehtab Bagh or lesser-known Agra monuments.
+- Disaster response: during monsoon landslides, automatic Black status, re-routing, stranded-tourist counts by area for rescue teams, and a freeze on price surges.
+- Event tourism: G20-style events, festivals such as Hornbill, Pushkar and Durga Puja, and cricket matches. Capacity forecasting and overflow to neighbouring towns' hotels.
+
+Looking ahead, these scenarios show that PRAHARI is a general engine. Any destination that has a crowding problem, or an empty-room problem, can use it.
+
+## SECTION 3: TECHNICAL IMPLEMENTATION
+
+### 3.1 Technology stack and why each choice was made
+
+Frontend and access channels
+- Traveller Progressive Web App (React + Vite + TypeScript): no app-store install, works on low-end Android phones, installs as an icon, and caches itineraries, alerts and emergency numbers offline for mountain areas with patchy connectivity.
+- WhatsApp Business Cloud API bot: most Indian MSME owners already use WhatsApp daily, so onboarding happens in a familiar channel with no new app to learn.
+- Government dashboard (React + MapLibre GL + deck.gl): open-source mapping with no licence fees, fast rendering of thousands of H3 hexagons, and support for Bhuvan and OpenStreetMap base layers.
+
+Backend and integration
+- FastAPI (Python) microservices: asynchronous, high-performance and automatically documented through OpenAPI. It shares a language with the ML stack, which cuts integration effort during the hackathon.
+- Beckn Protocol / ONDC adapter (Node.js, based on the open-source Beckn reference implementations): standards-compliant participation in ONDC hospitality and mobility flows.
+- Apache Kafka for event streaming: permits, bookings, alerts and check-ins arrive as real-time streams, and Kafka decouples producers from the forecasting and alerting consumers.
+- Redis for caching live D-CCI status and rate-limiting public APIs.
+
+Data layer
+- PostgreSQL + PostGIS: a reliable open-source database with first-class geospatial queries (distance to twins, polygons for destinations and hazard zones).
+- TimescaleDB extension for footfall and occupancy time series: efficient storage and fast aggregation over time.
+- Uber H3 hexagonal indexing: a uniform spatial grid for heatmaps and privacy-safe aggregation.
+- MinIO (S3-compatible) object storage for listing images and documents.
+
+AI and ML
+- LightGBM (gradient-boosted trees): strong accuracy on tabular data with exogenous features, fast to train, and explainable through SHAP.
+- Temporal Fusion Transformer (PyTorch Forecasting): a state-of-the-art, interpretable multi-horizon forecaster that handles known future inputs (holidays, events) and static metadata (destination type).
+- Nixtla StatsForecast (ETS, ARIMA): fast statistical baselines and fallbacks for sparse series.
+- Hierarchical reconciliation (MinT, minimum trace) so that attraction, destination, district and state forecasts are consistent.
+- Google OR-Tools (min-cost flow and linear programming) for capacity-constrained allocation of diverted demand.
+- Sentence-embedding model plus attribute vectors for twin-destination similarity. Contextual Thompson-sampling bandits for incentive learning.
+- Bhashini APIs for translation, speech-to-text and text-to-speech. A small instruction-tuned language model drafts listings from the owner's voice note, and the owner always approves the result.
+- MLflow for experiment tracking and the model registry. Evidently AI for data and model drift monitoring.
+
+DevOps and infrastructure
+- Docker and Kubernetes on a MeitY-empanelled cloud with data residency in India: horizontal scaling for peak seasons and portability across government clouds.
+- GitHub Actions CI/CD, Prometheus and Grafana monitoring, and centralised logging with OpenSearch.
+
+### 3.2 System architecture (how the components interact)
+
+PRAHARI follows a layered, event-driven microservice architecture.
+
+1. Data ingestion layer: connectors pull or receive data from (a) permit and e-pass systems, (b) onboarded hotel inventory and bookings (Setu and ONDC), (c) monument ticketing and footfall counters, (d) IMD weather and NDMA SACHET alerts, (e) holiday, school-vacation and event calendars, (f) search-interest indices, and (g) optional anonymised aggregates from partners (for example toll-plaza FASTag counts or telecom footfall under MoU). Everything is normalised into a common Destination-Day schema and published to Kafka.
+2. Data platform: raw data goes to object storage (the data lake), and cleaned features go to PostGIS and TimescaleDB with a feature store for ML.
+3. Intelligence layer: four ML services.
+   - Pulse Forecasting Service: demand forecasts with confidence intervals.
+   - D-CCI Service: live carrying capacity and status.
+   - Balance Rebalancer Service: twin recommendations, constrained allocation and incentive selection.
+   - Pricing Advisor Service: recommended room-rate bands with guardrails.
+4. Transaction and trust layer: Setu onboarding, verification, ONDC adapter, UPI payment reconciliation, reviews and trust scores, fair-price registry, and the SOS relay.
+5. Experience layer: traveller PWA, WhatsApp bot, Drishti dashboard, and public APIs for state portals and ONDC buyer apps.
+6. Governance layer: identity and access management (Keycloak with OpenID Connect and role-based access control), consent manager, audit logging, and an admin console for each state tenant.
+
+### 3.3 Data flow: input, processing, output
+
+Input
+- Daily and hourly signals: permits issued, bookings made, occupancy, ticket scans, weather forecasts, alerts, calendars and search trends.
+
+Processing
+- Step 1, cleaning and feature engineering: lags (1, 7, 14, 28, 364 days), rolling statistics, holiday proximity, long-weekend flags, school-vacation overlap, weather anomalies, event intensity, search-interest momentum and origin-city demand.
+- Step 2, forecasting: LightGBM and TFT ensemble forecasts for each destination and horizon, reconciled across the hierarchy with MinT. New destinations with no history (cold start) borrow patterns from a cluster of similar destinations through transfer learning.
+- Step 3, D-CCI calculation: Base capacity follows the Cifuentes (1992) method: Physical Carrying Capacity (PCC), Real Carrying Capacity (RCC = PCC x correction factors), and Effective Carrying Capacity (ECC = RCC x management capacity). PRAHARI makes it dynamic by recomputing the correction factors daily: rainfall and landslide risk, road closures, parking occupancy, water supply status, and event load.
+- Step 4, load ratio: LR = forecast demand / D-CCI. Status is Green if LR < 0.8, Amber if 0.8 to 1.0, Red if above 1.0, and Black for an official closure or hazard.
+- Step 5, rebalancing: for Red destinations, candidate twins are ranked by similarity (cosine similarity of attribute and description embeddings), travel-time penalty, predicted spare capacity and traveller preference. A min-cost-flow optimisation then decides how many nudges to send towards each twin without pushing any twin above 0.8 of its own capacity. This prevents "overflow cascades", where the crowd simply moves to the next village and overwhelms it.
+- Step 6, incentive selection: a contextual Thompson-sampling bandit chooses the incentive type and size for each traveller segment within the budget set by the state or the partner hotels, learning from acceptance rates.
+- Step 7, pricing advice: an elasticity-aware recommender suggests rate bands for hotels. Surges are capped in Black or emergency status.
+
+Output
+- Traveller: crowd forecast, twin suggestions with incentives, booking, alerts and fair-price information.
+- Hotel owner: weekly demand outlook, price suggestions, bookings and payouts.
+- Government: dashboard, alerts, simulations and reports, plus open APIs for other departments (police, transport, health, urban local bodies).
+
+### 3.4 API integrations and external connections
+
+- ONDC / Beckn: search, select, init, confirm, status and cancel flows for hospitality and local mobility.
+- NIDHI: verification of registered accommodation units (through an MoU with the Ministry of Tourism).
+- Bhashini: ULCA-compliant translation, ASR and TTS pipelines for 22 scheduled languages.
+- UPI (through a licensed payment aggregator), DigiLocker (document verification), and GSTIN or Udyam lookups.
+- IMD: city and district forecasts and nowcasts. NDMA SACHET: CAP alert feeds for disasters.
+- 112 ERSS and 1363 helpline: SOS relay with location and language preference.
+- data.gov.in and Open Government Data: monument footfall, tourism statistics and infrastructure datasets.
+- WhatsApp Business Cloud API: owner onboarding and alerts.
+
+### 3.5 Security, privacy and compliance
+
+- Privacy by design: PRAHARI never needs to track individual tourists. Crowd data is aggregated to H3 hexagons, with a minimum count threshold (k-anonymity, k of at least 20) and calibrated differential-privacy noise on published heatmaps.
+- Digital Personal Data Protection Act 2023: explicit, purpose-specific consent for travellers and hosts, data minimisation, the right to erasure, a grievance officer workflow, and consent logging.
+- Security: TLS 1.3 in transit, AES-256 encryption at rest, secrets management through HashiCorp Vault, OWASP Top 10 hardening, API rate limiting, Web Application Firewall, and regular vulnerability assessment and penetration testing.
+- Governance: role-based access (state admin, district officer, hotel owner, traveller), full audit trails, and compliance with CERT-In incident-reporting directions and MeitY cloud guidelines with data stored in India.
+- Responsible AI: explainable forecasts through SHAP, human approval for policy actions, bias checks so that twin recommendations do not favour only large properties, and fairness constraints that rotate exposure among eligible small stays.
+
+### 3.6 Interface design philosophy
+
+- Mobile-first, low-literacy friendly: large touch targets, icons with text, voice input and output, and colour status that is also backed by text and icons for colour-blind users.
+- Local language by default: the interface language follows the device language, with a one-tap switch.
+- Low-bandwidth mode: compressed images, offline caching, and SMS fallback for critical alerts.
+- Accessibility: the design targets WCAG 2.1 AA and GIGW 3.0 (Guidelines for Indian Government Websites) compliance.
+- Dashboard: "insight first" design. The top card states the one decision needed today, and details are shown only on request.
+
+### 3.7 Development tools and frameworks
+
+- Languages: Python 3.11 (ML and APIs), TypeScript (frontend), Node.js (Beckn adapter).
+- Tools: VS Code, Jupyter, Git and GitHub, Docker Compose for local development, Postman for API testing, Figma for UX, pytest and Playwright for automated testing, Locust for load testing.
+- All core components are open source, which avoids vendor lock-in and keeps costs low for government adoption.
+
+Looking ahead, this architecture uses open standards (Beckn, OpenAPI, CAP) and open-source components, so any state can adopt PRAHARI without licence lock-in.
+
+## SECTION 4: FEASIBILITY AND IMPACT ASSESSMENT
+
+### 4.1 36-hour hackathon development plan
+
+Team of 6: (1) ML lead, (2) data engineer, (3) backend and integration developer, (4) frontend and PWA developer, (5) dashboard and UX designer, (6) domain research, testing and pitch lead.
+
+- Hours 0 to 4: finalise scope for the Kullu-Manali cluster with 4 twins. Load prepared datasets (tourism statistics, monument footfall, weather history, holiday calendar, search trends, simulated hotel inventory). Set up the repository, CI and Docker Compose.
+- Hours 4 to 12: build the Pulse forecasting pipeline (LightGBM baseline plus TFT), the D-CCI calculator, and the core APIs. The frontend team builds the PWA screens (search, destination status, twin cards, booking mock). The designer builds the dashboard layout.
+- Hours 12 to 20: build the twin-similarity and min-cost-flow rebalancer, the WhatsApp onboarding bot (sandbox), the Bhashini translation integration, and the ONDC sandbox search and confirm flow. Connect the dashboard to live APIs.
+- Hours 20 to 28: add Kavach (SACHET and IMD alert simulation, SOS mock, fair-price registry), the pricing advisor, and the policy what-if simulator. Run end-to-end integration testing.
+- Hours 28 to 32: security hardening (authentication, role-based access), performance tests, bug fixes and model accuracy reporting (MAPE on a hold-out period).
+- Hours 32 to 36: polish the demo, record a backup demo video, rehearse the pitch, and prepare the Q&A sheet and documentation.
+
+De-risking: before the finale, the team will pre-build the data preparation, UI component library and model baselines. They will test the ONDC and Bhashini sandbox access, and prepare offline fallbacks (cached API responses) so the demo cannot fail because of the venue's internet.
+
+### 4.2 Resource requirements
+
+- Datasets: India Tourism Statistics (Ministry of Tourism), ASI monument footfall, state tourism statistics, data.gov.in, IMD historical weather or Open-Meteo, the Government of India holiday calendar, school calendars, Google Trends search indices, OpenStreetMap, and synthetic hotel inventory and bookings generated from published occupancy patterns.
+- APIs: ONDC staging (Beckn sandbox), Bhashini (ULCA), WhatsApp Business Cloud (test number), UPI sandbox (payment aggregator), and the IMD and SACHET public feeds.
+- Compute: laptops plus one cloud GPU instance for TFT training (a few hours). The total prototype cloud cost is under Rs 5,000.
+- Team skills: Python ML, data engineering, React, FastAPI, geospatial processing, UX design and domain research.
+
+### 4.3 Concrete impact metrics (pilot targets)
+
+The following are target KPIs for a 6-month district pilot, based on published results from similar systems and our own simulation. They will be validated during the pilot.
+- Forecast accuracy: MAPE of 15% or less for 7-day destination footfall forecasts. Published tourism-forecasting studies typically report 10% to 20%.
+- Decision lead time: from reactive same-day action to 7 to 14 days of advance warning for peak days.
+- Crowd relief: 10% to 15% of forecast peak-day overflow redirected to twin destinations.
+- Off-season occupancy: a 10 to 15 percentage-point rise in average occupancy for onboarded MSME stays.
+- Distribution cost: from 15% to 25% OTA commission down to single-digit fees through ONDC. On a Rs 2,000 room-night, the host keeps Rs 200 to Rs 400 more.
+- Onboarding time: from days (paperwork, photographers, OTA agents) to under 10 minutes through WhatsApp.
+- Alert reach: disaster alerts pushed to tourists in the affected area within 5 minutes of a SACHET alert.
+- Planning effort: weekly destination reports generated automatically, cutting a district office's manual compilation from about 2 days to about 10 minutes.
+
+Illustrative economic impact: a district receiving 1 lakh tourists on a peak weekend, spending Rs 4,000 per head, has Rs 40 crore of weekend spending at stake. Retaining just 5% of visitors who would otherwise cancel or turn back keeps about Rs 2 crore in the local economy per peak weekend.
+
+### 4.4 Challenges and mitigation strategies
+
+- Data availability and quality: many destinations lack daily footfall counts. Mitigation: combine proxy signals (permits, bookings, search, traffic), use cold-start transfer learning, and build data-sharing MoUs with states. Accuracy improves as onboarded hotels grow.
+- MSME adoption: owners may distrust new platforms. Mitigation: WhatsApp-first and language-first design, zero joining fee, on-ground onboarding camps with district tourism offices and self-help groups, and visible early wins (a weekly demand outlook) before any fee.
+- Traveller compliance with suggestions: tourists may still choose the hotspot. Mitigation: learning-based incentives, honest delay estimates, and attractive content for twins. Permit systems can offer twins at the moment a visitor gets no slot.
+- Overflow cascades: moving crowds to a fragile village. Mitigation: capacity-constrained optimisation with a hard cap at 0.8 of the twin's D-CCI, plus community consent before a village is added as a twin.
+- Integration dependency on government APIs: Mitigation: a modular adapter design, so the platform runs even when an integration is missing, and early engagement with ONDC and the Ministry of Tourism through innovation programmes.
+- Privacy concerns: Mitigation: aggregated data only, DPDP-compliant consent, and independent audits.
+
+### 4.5 Post-hackathon development roadmap
+
+- Months 0 to 3: build a production-grade minimum viable product, sign an MoU with one district tourism office (Kullu or the Nilgiris), complete ONDC certification as a network participant, and run a security audit.
+- Months 3 to 9: live pilot with 300 to 500 MSME stays, measured KPIs, and a publishable case study. Apply to Startup India Seed Fund, the MeitY Startup Hub and state innovation grants.
+- Months 9 to 18: expand to 3 to 5 states under a Software-as-a-Service or Digital Public Infrastructure model, integrate with state e-pass systems, and add tour operators, guides and transport providers.
+- Months 18 to 36: national coverage of priority destinations, APIs for private travel companies, and South Asian and ASEAN expansion through bilateral tourism cooperation.
+
+### 4.6 Cost-benefit analysis (indicative)
+
+Costs for a district pilot, first year
+- Cloud infrastructure: about Rs 4 to 6 lakh.
+- On-ground onboarding and training: about Rs 5 to 8 lakh.
+- Development, support and maintenance (lean team): about Rs 20 to 25 lakh.
+- Total: about Rs 30 to 40 lakh per district-cluster pilot.
+
+Benefits for a district pilot, first year
+- If only 2 peak weekends in a season retain Rs 2 crore each (see 4.3), the retained spending of about Rs 4 crore is 10 or more times the pilot cost, before counting off-season occupancy gains, commission savings for hosts, lower rescue and congestion costs, and GST collections.
+- At state scale, costs fall sharply per district because the platform is multi-tenant, while benefits grow with every connected destination.
+
+### 4.7 Similar successful implementations that support feasibility
+
+- Amsterdam's crowd-monitoring and visitor-spreading programmes and its "Crowd Monitoring Systeem Amsterdam" dashboards show that real-time crowd data can guide city management.
+- Venice's day-tripper access fee (2024) and Bhutan's Sustainable Development Fee show demand-management levers at destination scale.
+- In India, the Ooty-Kodaikanal e-pass system, pilgrimage registration portals and DigiYatra at airports show that Indian tourists adopt digital passes quickly when the process is simple.
+- ONDC's growth across mobility, food and retail shows that open networks can lower intermediary costs for small sellers.
+- Academic evidence shows that search and big-data signals improve tourism demand forecasts (Bangwayo-Skeete and Skeete, 2015; Li et al., 2017) and that deep learning models improve multi-horizon accuracy (Law et al., 2019; Lim et al., 2021).
+
+Looking ahead, PRAHARI's feasibility rests on proven components, open government platforms and a phased rollout. That makes it realistic to build in 36 hours and credible to scale nationally.
+
+## SECTION 5: INNOVATION AND RESEARCH
+
+### 5.1 Literature review
+
+- Tourism demand forecasting: Song and Li (2008, Tourism Management) reviewed decades of econometric and time-series tourism forecasting and concluded that no single model dominates. This supports our ensemble approach. Law, Li, Fong and Han (2019, Annals of Tourism Research) showed that deep learning improves tourism demand forecasting accuracy.
+- Big-data signals: Bangwayo-Skeete and Skeete (2015, Tourism Management) showed that Google search data improves forecasts of tourist arrivals. Li, Pan, Law and Huang (2017, Tourism Management) built composite search indices for more accurate forecasting. PRAHARI uses search interest as a leading indicator.
+- Interpretable multi-horizon forecasting: the Temporal Fusion Transformer (Lim, Arik, Loeff and Pfister, 2021, International Journal of Forecasting) handles known future inputs such as holidays, which is essential for tourism.
+- Hierarchical reconciliation: Wickramasuriya, Athanasopoulos and Hyndman (2019, Journal of the American Statistical Association) introduced MinT reconciliation. PRAHARI uses it to give consistent numbers across attraction, district and state levels.
+- Carrying capacity: Cifuentes (1992) introduced the PCC, RCC and ECC method for protected areas, which is widely used in tourism carrying-capacity studies. PRAHARI extends it into a dynamic, daily index.
+- Destination life cycle and resident attitudes: Butler (1980) and Doxey (1975) show that unmanaged growth leads to resident irritation and destination decline. This is the theoretical case for proactive management.
+- Overtourism policy: the UNWTO (2018) report "Overtourism? Understanding and Managing Urban Tourism Growth beyond Perceptions" recommends dispersing visitors in time and space. This is exactly what PRAHARI's rebalancer operationalises.
+- Adaptive incentives: Thompson sampling (Agrawal and Goyal, 2012) gives a principled way to learn which nudges work while limiting wasted incentive budget.
+
+### 5.2 Competitive analysis
+
+- Compared with OTAs: OTAs sell inventory. PRAHARI manages destinations and grows inventory. It includes unlisted MSME stays at single-digit cost through ONDC, and it optimises for capacity and regional benefit, not only conversion.
+- Compared with government portals: portals inform. PRAHARI predicts, recommends and transacts in real time.
+- Compared with e-pass and permit systems: permits restrict. PRAHARI predicts days ahead and redirects rejected or deterred demand to twins, so the economic value is kept.
+- Compared with map and traffic apps: these report congestion as it happens. PRAHARI forecasts it and links it to hotel availability and policy levers.
+- Compared with AI trip planners and chatbots: they recommend without capacity awareness and send everyone to the same places. PRAHARI's recommendations are capacity-constrained and fairness-aware.
+
+PRAHARI's defensible advantages
+- A proprietary Dynamic Carrying Capacity Index model and a destination-twin knowledge graph.
+- A capacity-constrained rebalancing algorithm that prevents overflow cascades.
+- Integration depth with Indian public digital infrastructure (ONDC, Bhashini, NIDHI, SACHET, 112 and 1363).
+- A data network effect: every onboarded host and every season improves forecasts and recommendations.
+
+Intellectual property potential: the dynamic carrying-capacity scoring method and the capacity-aware twin rebalancing method can be explored for patent filing, and the destination-twin dataset can be published as an open dataset for research.
+
+### 5.3 Future scope beyond the hackathon
+
+- Extend Setu to tour guides, local artisans, adventure operators, cab drivers and experiences, so that the whole local tourism value chain benefits.
+- Carbon-aware itineraries: estimate each trip's footprint and reward low-carbon travel (rail, shared transport).
+- Crowd-safety computer vision at critical chokepoints (pilgrimage queues, ghats), processed at the edge without storing faces.
+- Medical tourism ("Heal in India") and MICE tourism demand forecasting for hotels.
+- Open APIs so private travel companies can use PRAHARI capacity signals, making the whole industry more responsible.
+- Integration with a future National Tourism Data Stack as Digital Public Infrastructure.
+
+### 5.4 Sustainability and long-term viability
+
+- Financial: a mixed revenue model. States pay a software-as-a-service licence for Drishti. Hosts get a free basic tier, with a small ONDC transaction fee and optional premium analytics. Industry bodies can buy anonymised insight reports. This makes the platform self-sustaining after the pilot.
+- Environmental: spreading visitors reduces the strain on fragile ecosystems and extends destination life cycles.
+- Social: most of the added revenue goes to local families, women-led homestays and self-help groups, strengthening community support for tourism.
+- Institutional: built on open standards and government platforms, so it can be handed over to or co-owned with the Ministry of Tourism or states as Digital Public Infrastructure.
+
+In summary, PRAHARI turns India's tourism challenge of too many people in too few places into its biggest growth opportunity. It fills hotels, supports small businesses, protects travellers and fragile destinations, and gives governments the foresight to manage tourism well. That is how India's tourism industry can grow sustainably towards Viksit Bharat 2047.

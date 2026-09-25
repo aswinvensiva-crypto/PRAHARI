@@ -1,0 +1,55 @@
+# PRAHARI: AI Demand Forecasting & Crowd Rebalancing to Boost Hotels, Homestays and Travel in India
+
+## Opening Impact Statement
+
+India's tourism problem is not a lack of tourists or rooms. The wrong places are full on the wrong days. PRAHARI is an AI platform that predicts tourist demand, measures each destination's live carrying capacity, and redirects surplus travellers to nearby under-used destinations and small hotels. It turns overcrowding into income for local tourism businesses.
+
+## Problem Context
+
+Tourism accounts for roughly 5% of India's GDP and, by Ministry of Tourism estimates, supports about 7.6 crore jobs. India recorded about 2,509 million domestic tourist visits in 2023 (India Tourism Statistics 2024), but the demand is highly concentrated. On long weekends, festivals and school holidays, hill stations, pilgrimage towns and beaches exceed their capacity, causing traffic jams of many hours, water and waste stress, and safety risks. The Madras High Court had to order an e-pass system for Ooty and Kodaikanal in 2024, the NGT capped vehicles to Rohtang Pass, and the Supreme Court has examined carrying-capacity limits for Himalayan hill towns.
+
+At the same time, thousands of nearby homestays, lodges and small hotels stay half-empty for most of the year. These MSMEs make up most of India's accommodation stock, yet many are not listed online or pay OTA commissions of 15% to 25%. They set prices by guesswork, and district tourism officers usually see tourist numbers months late, with no way to forecast next weekend's crowd.
+
+Travellers are also affected. Tourists worry about overcharging by taxis and guides, fake listings and sudden weather disasters. Monsoon floods and landslides in Himachal Pradesh and Uttarakhand have repeatedly stranded thousands of visitors who had no early warning. Each bad experience spreads on social media and hurts the destination's brand. International arrivals (about 9.52 million in 2023) are still below the 2019 peak of 10.93 million, and India's share of global arrivals remains below 2%. Trust and experience matter for recovering that share.
+
+Existing solutions work in isolation. OTAs sell rooms, portals give information, and permits restrict entry. None of them predicts demand, respects capacity and redistributes value together. This gap directly affects the goals of Swadesh Darshan 2.0, the SASCI iconic-destination projects, the Budget 2025-26 plan to develop 50 top destinations with states, and Dekho Apna Desh. As domestic travel grows and climate extremes increase, the need for predictive destination management is urgent.
+
+## Solution Overview
+
+PRAHARI (Predictive Routing & AI for Hotels, Attractions, Regions & Itineraries) works as a closed loop: Predict, Protect, Redistribute. It has five connected modules.
+
+1. PRAHARI Pulse forecasts footfall and hotel occupancy for every destination 1 to 30 days ahead, using bookings, permits, search trends, weather, holidays and events. It gives clear explanations such as "+42% crowd expected due to the long weekend".
+2. PRAHARI Balance calculates a Dynamic Carrying Capacity Index for each destination, updated daily for weather, roads, water and parking. When a place is forecast to overflow, it recommends similar nearby "twin" destinations (for example Manali to Tirthan or Jibhi, Ooty to Kotagiri) with personalised incentives. Its capacity-aware optimisation ensures the crowd is not simply pushed to another fragile village. The system learns which incentive works best for each type of traveller (a discount, a free local experience, a priority entry slot or green points), so every rupee of incentive budget moves the most people.
+3. PRAHARI Setu lets homestay and small-hotel owners join in under 10 minutes through WhatsApp or voice in 22 Indian languages (Bhashini), verifies them through GST, Udyam or NIDHI, and lists them on the government-backed ONDC network at single-digit fees with UPI payments. A fair pricing advisor suggests room rates from demand forecasts.
+4. PRAHARI Kavach protects travellers with verified providers, a fair-price registry for taxis and guides, NDMA SACHET and IMD disaster alerts, and an SOS link to 112 and the 1363 tourist helpline.
+5. PRAHARI Drishti gives state and district officials a live command dashboard with forecasts, capacity status, hotel availability and a "what-if" policy simulator.
+
+The technology uses proven, justified tools: LightGBM and Temporal Fusion Transformer forecasting with hierarchical reconciliation, min-cost-flow optimisation for rebalancing, and learning-based incentives. It runs on FastAPI, PostgreSQL with PostGIS, and Kafka on an Indian government-empanelled cloud, with privacy-by-design aggregation that is compliant with the DPDP Act 2023. It strengthens Digital India infrastructure (ONDC, Bhashini, UPI, DigiLocker, NIDHI) instead of duplicating it.
+
+A simple example shows how it works. Priya searches for Manali on a long weekend. PRAHARI warns her that Manali is expected at twice its normal crowd with long traffic delays, and suggests Tirthan Valley, three hours closer, quiet, with 38 verified homestays and 15% off. She books in two minutes through ONDC with UPI. Ramesh, a homestay owner in Tirthan who joined through WhatsApp in Hindi, gets a booking he would never have received. Meanwhile, the Kullu District Tourism Officer saw the peak coming a week earlier on the Drishti dashboard, approved an incentive campaign, and alerted the police and transport departments in advance.
+
+## Implementation Feasibility
+
+Our team of six (ML, data engineering, backend, frontend, UX and domain research) will build a working prototype in the 36-hour hackathon for the Kullu-Manali cluster with four twin destinations. It will include a traveller web app, a WhatsApp onboarding bot, the forecasting and rebalancing engines, and the government dashboard. We will use public datasets (India Tourism Statistics, ASI footfall, weather, holiday calendars, search trends) and sandbox APIs (ONDC, Bhashini, UPI). Data preparation and model baselines are built before the event, and offline fallbacks protect the live demo.
+
+After the hackathon, the plan is: a 6-month district pilot in Kullu-Manali and the Nilgiris with 300 to 500 small stays; ONDC network-participant certification; then rollout to 3 to 5 states in 18 months on a multi-tenant cloud architecture that each state can join as a tenant. A district pilot is estimated to cost about Rs 30 to 40 lakh in the first year. Every major component is open source, which avoids licence lock-in.
+
+The main risks have mitigations built into the design. Where daily footfall data is missing, PRAHARI combines proxy signals and borrows patterns from similar destinations. For owners wary of new platforms, it offers WhatsApp-first onboarding, no joining fee and onboarding camps run with district offices and self-help groups. If a government API is unavailable, modular adapters let the platform keep working. Privacy is protected by aggregating crowd data into hexagon grids with minimum-count thresholds, so no individual is tracked. This is realistic to build within the hackathon's limits and ready to grow into a production system.
+
+## Expected Outcomes
+
+Pilot targets, to be validated in the field:
+- 7-day footfall forecasts with a mean absolute percentage error of 15% or less, giving 7 to 14 days of advance warning instead of same-day reaction.
+- 10% to 15% of peak-day overflow redirected to twin destinations, reducing congestion and safety risk.
+- A 10 to 15 percentage-point rise in off-season occupancy for onboarded MSME stays.
+- Distribution costs cut from 15% to 25% commission to single digits. Hosts keep Rs 200 to Rs 400 more per Rs 2,000 room-night.
+- Onboarding time reduced from days to under 10 minutes, in the host's own language.
+- Disaster alerts delivered to tourists in affected areas within 5 minutes.
+- Illustratively, retaining just 5% of 1 lakh peak-weekend visitors who spend Rs 4,000 each keeps about Rs 2 crore in the local economy every peak weekend, many times the pilot cost.
+- Automated weekly destination reports cut a district office's manual compilation from about 2 days to about 10 minutes.
+
+Qualitatively, PRAHARI improves traveller experience and safety, gives rural and women-led homestays fair market access, spreads income across villages, and lets governments plan infrastructure with evidence. It supports SDG 8.9 (sustainable tourism jobs), SDG 11 and SDG 12.b, and the national vision of Viksit Bharat 2047. Over the long term, every season of data makes forecasts sharper and recommendations more personal. Every new host widens the choice for travellers. Every connected destination strengthens India's national picture of tourism demand, creating a Digital Public Infrastructure for tourism that states, industry and researchers can all build on.
+
+## Strategic Value
+
+PRAHARI deserves selection because it is the first idea to connect prediction, capacity and redistribution in one loop, and it is built on India's own digital public infrastructure. It is technically deep, realistic to build in 36 hours, and scalable to every destination in India. It turns India's overcrowded hotspots into the country's next wave of tourism growth.
