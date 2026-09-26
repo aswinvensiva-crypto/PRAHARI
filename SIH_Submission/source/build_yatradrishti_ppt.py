@@ -53,16 +53,16 @@ assert pointers2 == ["Detailed explanation of the proposed solution", "How it ad
 pointer(s2, 0.4, 1.72, 12.53, pointers2[0], h=0.34, size=12)
 text(s2, 0.4, 2.1, 12.53, 0.5, [{"runs": [
     ("YatraDrishti ", {"bold": True, "color": NAVY}),
-    ("is a multi-sided AI platform that unites ", {}),
-    ("tourists, hoteliers, transport providers and local artisans", {"bold": True, "color": ORANGE}),
-    (" in one intelligent ecosystem: a Sustainable Tourism Operating System that links demand for hotels with "
-     "predictive crowd balancing for governments.", {})]}], size=12)
+    ("turns every small hotel's WhatsApp into an ", {}), ("AI front desk", {"bold": True, "color": ORANGE}),
+    (" and links them in a live ", {}), ("Tourism Demand Exchange", {"bold": True, "color": ORANGE}),
+    (": before a hotspot overflows, nearby hotels bid for the surplus tourists within safe capacity, "
+     "and credits keep the money in the local economy.", {})]}], size=12)
 mods = [
-    ("robot", "1  Tourist App", "GenAI itinerary (budget, pace, weather) · AR monument overlay · Green Travel Pass", BLUE, T_BLUE),
-    ("hotel", "2  Hotelier Suite", "XGBoost + Prophet dynamic pricing · zero-commission direct booking", ORANGE, T_ORANGE),
-    ("balance", "3  Overtourism Mitigator", "Predicts crowd peaks · nudges to time-shifted or hidden spots with credits", GREEN, T_GREEN),
-    ("store", "4  Local Vendor Hub", "One-click, QR-verified onboarding of guides, artisans & homestays", PURPLE, T_PURPLE),
-    ("mobile", "5  Offline Edge-AI Guide", "On-device multilingual voice guide, translation & SOS without network", RED, T_RED),
+    ("whatsapp", "1  AI Front Desk", "Each hotel gets its own multilingual WhatsApp AI that answers, books & upsells; no app", GREEN, T_GREEN),
+    ("balance", "2  Demand Exchange", "Forecast overflow is offered to nearby hotels; they bid discounts in one tap", ORANGE, T_ORANGE),
+    ("kavach", "3  Capacity Guard", "Live carrying-capacity index; no twin pushed above 80%, so no new hotspot", RED, T_RED),
+    ("economic", "4  Destination Wallet", "Green Travel Credits spendable only at local MSMEs; geo-fenced 2-way QR", BLUE, T_BLUE),
+    ("store", "5  Micro-Package Composer", "AI bundles homestay + guide + artisan + cab into one booking; auto UPI split", PURPLE, T_PURPLE),
 ]
 cw, gap, y0 = 2.33, 0.22, 2.68
 for i, (ic, name, desc, col, tint) in enumerate(mods):
@@ -76,20 +76,20 @@ for i, (ic, name, desc, col, tint) in enumerate(mods):
 
 colw = 6.14
 pointer(s2, 0.4, 4.3, colw, pointers2[1], h=0.34, size=12)
-fixes = [("Overcrowded tier-1 hotspots", "predictive, time-shifted rerouting"),
-         ("15–30% OTA commissions", "zero-commission direct booking engine"),
-         ("Guesswork hotel pricing", "AI demand forecast & dynamic rates"),
-         ("Invisible artisans & homestays", "verified marketplace inside itineraries"),
-         ("Static, unsafe itineraries", "weather-aware plans + offline SOS")]
+fixes = [("Overcrowded hotspots", "overflow auctioned to nearby hotels in advance"),
+         ("15–30% OTA commissions", "direct bookings via the hotel's own AI WhatsApp"),
+         ("No live crowd data", "1-tap WhatsApp pulses from hotels & vendors"),
+         ("Invisible artisans & homestays", "bundled into AI micro-packages"),
+         ("Tourist money leaks out", "credits recirculate inside the destination")]
 text(s2, 0.45, 4.72, colw - 0.05, 2.2, [
     {"bullet": True, "runs": [(a, {"bold": True, "color": RED}), ("  →  ", {"color": MUTED}), (b, {})]} for a, b in fixes
 ], size=12, space_after=6)
 pointer(s2, 6.79, 4.3, colw, pointers2[2], h=0.34, size=12)
-uniq = [("Tourism OS: ", "tourist actions update hotel & vendor analytics live"),
-        ("Green Travel Credits: ", "crowd pressure becomes revenue for nearby spots"),
-        ("Enterprise AI for small hotels: ", "5-minute setup via WhatsApp or iCal"),
-        ("Offline Edge-AI: ", "safety guide works in no-network regions"),
-        ("Not an aggregator or GPT wrapper: ", "real pricing models + spatial analytics")]
+uniq = [("Self-funding crowd balancing: ", "hotels bid for diverted tourists"),
+        ("Hotel-in-a-WhatsApp: ", "multi-tenant AI front desk, already prototyped"),
+        ("Human sensor network: ", "MSME pulses replace tourist tracking"),
+        ("Closed-loop local money: ", "credits spendable only in the destination"),
+        ("No overflow cascade: ", "capacity guard keeps every twin under 80%")]
 text(s2, 6.84, 4.72, colw - 0.05, 2.2, [
     {"bullet": True, "bullet_color": GREEN, "runs": [(a, {"bold": True, "color": NAVY}), (b, {})]} for a, b in uniq
 ], size=12, space_after=6)
@@ -104,25 +104,26 @@ table(s3, 0.4, 2.02, 4.55, [1.2, 3.35], [
     ["Layer", "Technology"],
     ["Frontend", "React Native / Flutter · Next.js dashboard"],
     ["Backend", "FastAPI (Python) · Node.js (TypeScript) gateway"],
-    ["WhatsApp", [("Multi-tenant Baileys AI gateway ", {}), ("(already built)", {"bold": True, "color": GREEN})]],
-    ["AI / ML", "XGBoost + Prophet · PyTorch · LangChain + Llama-3 / Gemini"],
-    ["Data", "PostgreSQL + PostGIS · Redis · H3 hexagon grid"],
-    ["AR / Edge", "ARCore / ARKit · TensorFlow Lite (on-device)"],
-    ["APIs", "OpenStreetMap · OpenWeatherMap · data.tourism.gov.in · Razorpay (test)"],
-    ["Cloud", "Docker · Kubernetes · AWS / GCP"],
+    ["WhatsApp", [("Multi-tenant Baileys AI gateway ", {}), ("(already built)", {"bold": True, "color": GREEN}),
+                  (" → per-hotel AI desk", {})]],
+    ["AI / ML", "XGBoost + Prophet · LangChain + Llama-3 / Gemini"],
+    ["Matching", "OR-Tools: bid matching under capacity limits"],
+    ["Data", "PostgreSQL + PostGIS · Redis · H3 · Docker / K8s"],
+    ["Payments", "UPI split settlement (Razorpay Route, test mode)"],
+    ["Tourist UX", "AR (ARCore / ARKit) · TensorFlow Lite offline guide"],
     ["Hardware", "None: runs on any smartphone"],
 ], size=10, row_h=0.43)
 
 rx, rw = 5.2, 7.73
 pointer(s3, rx, 1.3, rw, pointers3[1], h=0.62, size=12)
-inputs = ["Tourist preferences", "Bookings / iCal", "Weather API", "Footfall data", "Local events"]
+inputs = ["Bookings / iCal", "MSME WhatsApp pulses", "Weather API", "Footfall data", "Events & holidays"]
 iw = (rw - 4 * 0.1) / 5
 for i, t in enumerate(inputs):
     shape(s3, MSO_SHAPE.ROUNDED_RECTANGLE, rx + i * (iw + 0.1), 2.03, iw, 0.36, fill=T_GREY, line=LINE, radius=0.3,
           paras=[{"runs": [(t, {})], "align": PP_ALIGN.CENTER}], size=9.5, color=INK, margin=0.03)
 arrow(s3, rx + rw / 2 - 0.13, 2.42, 0.26, 0.24, kind=MSO_SHAPE.DOWN_ARROW)
 steps = [("1  Ingest", "FastAPI · PostGIS", BLUE), ("2  Forecast demand", "Prophet + XGBoost", BLUE),
-         ("3  Crowd density", "anonymised H3 grid", BLUE), ("4  Peak ahead?", "per site, per hour", NAVY)]
+         ("3  Capacity guard", "live index per site", BLUE), ("4  Overflow ahead?", "demand > 80% capacity", NAVY)]
 sw = (rw - 3 * 0.28) / 4
 for i, (a, b, col) in enumerate(steps):
     x = rx + i * (sw + 0.28)
@@ -134,14 +135,14 @@ for i, (a, b, col) in enumerate(steps):
 lx = rx + 3 * (sw + 0.28)
 arrow(s3, lx + sw / 2 - 0.13, 3.45, 0.26, 0.26, kind=MSO_SHAPE.DOWN_ARROW)
 shape(s3, MSO_SHAPE.ROUNDED_RECTANGLE, lx - 0.3, 3.76, sw + 0.3, 0.72, fill=T_ORANGE, line=ORANGE, radius=0.15,
-      paras=[{"runs": [("YES: congestion", {"bold": True, "color": RED})], "align": PP_ALIGN.CENTER},
+      paras=[{"runs": [("YES: overflow", {"bold": True, "color": RED})], "align": PP_ALIGN.CENTER},
              {"runs": [("NO → normal plan & pricing", {"size": 9})], "align": PP_ALIGN.CENTER}], size=11, color=INK)
 arrow(s3, lx - 0.62, 3.99, 0.28, 0.26, kind=MSO_SHAPE.LEFT_ARROW, color=ORANGE)
 shape(s3, MSO_SHAPE.ROUNDED_RECTANGLE, rx, 3.76, lx - 0.66 - rx, 0.72, fill=ORANGE, radius=0.15,
-      paras=[{"runs": [("5  Rebalance: time-shifted or secondary-site nudge + Green Travel Credits; hotel rates re-optimised", {"bold": True})],
+      paras=[{"runs": [("5  Demand Exchange: surplus offered to nearby hotels on WhatsApp → best bids within capacity → tourist gets twin + credits", {"bold": True})],
               "align": PP_ALIGN.CENTER}], size=10.5, color=WHITE, margin=0.08)
 arrow(s3, rx + rw / 2 - 1.7, 4.52, 0.26, 0.24, kind=MSO_SHAPE.DOWN_ARROW)
-outs = [("Tourist app", "itinerary · AR · credits · SOS"), ("Hotel dashboard + WhatsApp", "rate alerts · direct bookings"),
+outs = [("Tourist app / WhatsApp", "itinerary · packages · credits"), ("Hotel AI front desk", "bids · bookings · rate tips"),
         ("Govt analytics", "footfall heatmap · policy switch")]
 ow = (rw - 2 * 0.15) / 3
 for i, (a, b) in enumerate(outs):
@@ -150,7 +151,7 @@ for i, (a, b) in enumerate(outs):
                  {"runs": [(b, {"size": 9.5})], "align": PP_ALIGN.CENTER}], size=11, color=INK, margin=0.04)
 text(s3, rx, 5.52, rw, 0.28, [{"runs": [("36-hour prototype plan (1 pilot circuit, public + synthetic data)", {"bold": True})]}],
      size=10.5, color=NAVY)
-plan = ["0–6 h  Data & schema", "6–14 h  Pricing & forecast", "14–22 h  Itinerary AI & crowd", "22–30 h  Apps & AR",
+plan = ["0–6 h  Data & schema", "6–14 h  Forecast & capacity", "14–22 h  Demand Exchange", "22–30 h  AI desk & wallet",
         "30–36 h  Test & demo"]
 pw = (rw + 4 * 0.08) / 5
 for i, t in enumerate(plan):
@@ -170,10 +171,10 @@ assert pointers4 == ["Analysis of the feasibility of the idea", "Potential chall
                      "Strategies for overcoming these challenges"], pointers4
 pointer(s4, 0.4, 1.3, 12.53, pointers4[0], h=0.34, size=12)
 feas = [
-    ("whatsapp", "Technical", GREEN, T_GREEN, ["Multi-tenant WhatsApp AI gateway already working", "Per-tenant AI prompts defined"]),
+    ("whatsapp", "Technical", GREEN, T_GREEN, ["WhatsApp AI gateway already works", "Per-hotel AI desk = new tenant config, not new code"]),
     ("data", "Data & APIs", NAVY, T_GREY, ["data.tourism.gov.in, OSM, weather, Kaggle hotel data", "Backup: synthetic footfall + 50 hotels"]),
-    ("economic", "Economic", BLUE, T_BLUE, ["Hotel SaaS ≈ ₹1,250–4,200 / month", "3–5% fee on local experiences"]),
-    ("ops", "Operational", ORANGE, T_ORANGE, ["5-minute hotel setup via WhatsApp / iCal", "Fits existing hotel PMS"]),
+    ("economic", "Economic", BLUE, T_BLUE, ["Hotel SaaS ≈ ₹1,250–4,200 / month", "Small fee on Exchange wins & packages"]),
+    ("ops", "Operational", ORANGE, T_ORANGE, ["Nothing to install: hotels use WhatsApp", "Fits existing PMS via iCal"]),
 ]
 fw = (12.53 - 3 * 0.2) / 4
 for i, (ic, name, col, tint, pts) in enumerate(feas):
@@ -194,12 +195,13 @@ tbl_rows = [
     [pointers4[1], pointers4[2]],
     ["WhatsApp session keys exposed in code", "Revoke linked device, purge .baileys_auth from git, secrets in environment variables"],
     ["Sessions lost on every restart", "Database-backed auth store (PostgreSQL / Redis) with caching & safe key serialisation"],
-    ["WhatsApp rate limits / number ban", "Outbound queue, rate limiter, randomised delays; official WhatsApp Business API in production"],
+    ["WhatsApp rate limits / number ban", "Queue, rate limiter, randomised delays; official WhatsApp Business API in production"],
     ["Cross-tenant data leakage", "Per-tenant session factory + JWT tenant binding on every endpoint"],
-    ["No live telecom crowd data", "Anonymised H3 density counts + Poisson-simulated footfall (DPDP Act 2023)"],
-    ["Hotels resist new software", "Zero-friction iCal / webhook sync with existing PMS; rate tips on WhatsApp"],
+    ["Hotels game the Demand Exchange", "Bids checked against live inventory, discount caps, hotel reputation score"],
+    ["Fake credit redemptions", "Two-way geo-fenced QR: tourist and vendor must be within 50 m"],
+    ["No live crowd data", "MSME WhatsApp pulses + anonymised H3 counts; synthetic data as backup"],
 ]
-t4 = table(s4, 0.4, 3.93, 12.53, [3.9, 8.63], tbl_rows, size=10.5, row_h=0.39)
+t4 = table(s4, 0.4, 3.93, 12.53, [3.9, 8.63], tbl_rows, size=10, row_h=0.355)
 t4.cell(0, 0).fill.fore_color.rgb = RED
 t4.cell(0, 1).fill.fore_color.rgb = GREEN
 for r in range(1, len(tbl_rows)):
@@ -214,13 +216,13 @@ assert pointers5 == ["Potential impact on the target audience",
 pointer(s5, 0.4, 1.3, 12.53, pointers5[0], h=0.34, size=12)
 aud = [
     ("traveller", "Tourists", BLUE, T_BLUE, "20–35%", "savings on off-peak routes*",
-     ["Budget-aware custom trips", "Eco-travel rewards", "Offline SOS"]),
+     ["Less crowded trips", "Credits for off-peak choices", "One-booking local packages"]),
     ("hotel", "Small hotels", ORANGE, T_ORANGE, "+22–30%", "low-season yield*",
-     ["Zero-commission bookings", "AI rate tips on WhatsApp", "Own their guest data"]),
+     ["Own AI desk, no OTA cut", "Win overflow guests by bidding", "AI rate tips on WhatsApp"]),
     ("store", "Artisans & locals", PURPLE, T_PURPLE, "+35%", "direct revenue*",
-     ["Verified digital badge", "Direct tourist reach", "No middlemen"]),
+     ["Sold inside micro-packages", "Instant UPI split payouts", "Credits spent at their shops"]),
     ("gov", "Governments", GREEN, T_GREEN, "up to 40%", "less peak congestion*",
-     ["Predictive heatmaps", "Emergency policy switch", "Greener destinations"]),
+     ["Overflow handled in advance", "Live MSME crowd pulses", "Emergency policy switch"]),
 ]
 aw = (12.53 - 3 * 0.2) / 4
 for i, (ic, name, col, tint, big, lab, pts) in enumerate(aud):
@@ -235,7 +237,7 @@ for i, (ic, name, col, tint, big, lab, pts) in enumerate(aud):
 pointer(s5, 0.4, 3.9, 12.53, pointers5[1], h=0.34, size=12)
 ben = [
     ("social", "Social", BLUE, ["Preserves indigenous crafts & heritage", "Brings tier-2/3 & rural areas into tourism", "Multilingual access for all"]),
-    ("economic", "Economic", GREEN, ["Spend shifts from OTAs to local economies", "Hotels keep 100% of direct-booking margin", "New income for guides & homestays"]),
+    ("economic", "Economic", GREEN, ["Credits recirculate in the local economy", "Hotels keep 100% of direct-booking margin", "Crowd balancing paid by hotels, not subsidies"]),
     ("env", "Environmental", RGBColor(0x3A, 0x7D, 0x44), ["Less strain on fragile spots (Ladakh, Shimla, Munnar)", "Rewards off-peak & eco-friendly transit", "Supports SDG 8 & SDG 12"]),
     ("kavach", "Safety & privacy", RED, ["Offline SOS in no-network areas", "DPDP Act 2023: no PII, anonymised H3 counts", "Weather-aware re-planning"]),
 ]
@@ -258,7 +260,7 @@ assert pointers6 == ["Details / Links of the reference and research work"], poin
 pointer(s6, 0.4, 1.3, 12.53, pointers6[0], h=0.34, size=12)
 
 
-def ref_col(slide, x, w, ic, title, col, items):
+def ref_col(slide, x, w, ic, title, col, items, size=11):
     icon(slide, ic, x, 1.8, 0.42, col)
     text(slide, x + 0.52, 1.8, w - 0.55, 0.42, [title], size=13, bold=True, color=col, anchor=MSO_ANCHOR.MIDDLE)
     paras = []
@@ -267,7 +269,7 @@ def ref_col(slide, x, w, ic, title, col, items):
         if url:
             runs += [("  ", {}), (link_text, {"color": BLUE, "link": url})]
         paras.append({"bullet": True, "bullet_color": col, "runs": runs})
-    text(slide, x, 2.32, w, 3.9, paras, size=11, space_after=5)
+    text(slide, x, 2.32, w, 3.1, paras, size=size, space_after=4)
 
 
 ref_col(s6, 0.4, 6.1, "univ", "Data, platforms & policy", NAVY, [
@@ -285,21 +287,23 @@ ref_col(s6, 6.83, 6.1, "flask", "Research papers", ORANGE, [
      "https://arxiv.org/abs/2411.01636"),
     ("Gössling & Mei (2025) AI and sustainable tourism: risks & opportunities for the SDGs, Current Issues in Tourism",
      "doi:10.1080/13683500.2025.2477142", "https://doi.org/10.1080/13683500.2025.2477142"),
-    ("Sidiq et al. (2025) Role of AI in transforming smart tourism, JSEIT", "doi:10.31764/jseit.v5i2.30705",
-     "https://doi.org/10.31764/jseit.v5i2.30705"),
+    ("Vickrey (1961) Counterspeculation, auctions & sealed tenders, J. of Finance (Demand Exchange)",
+     "doi:10.1111/j.1540-6261.1961.tb02789.x", "https://doi.org/10.1111/j.1540-6261.1961.tb02789.x"),
+    ("Cifuentes (1992) Tourism carrying-capacity method, CATIE (Capacity Guard)", "", None),
     ("Chen & Guestrin (2016) XGBoost: a scalable tree boosting system, KDD", "doi:10.1145/2939672.2939785",
      "https://doi.org/10.1145/2939672.2939785"),
     ("Taylor & Letham (2018) Forecasting at scale (Prophet), The American Statistician", "doi:10.1080/00031305.2017.1380080",
      "https://doi.org/10.1080/00031305.2017.1380080"),
-])
+], size=10.5)
 shape(s6, MSO_SHAPE.ROUNDED_RECTANGLE, 0.4, 5.48, 12.53, 0.6, fill=T_GREEN, radius=0.3, margin=0.2,
       paras=[{"runs": [("Our prototype base: ", {"bold": True, "color": GREEN}),
                        ("working multi-tenant WhatsApp AI gateway (Node.js + Baileys) with per-tenant AI prompts; codebase "
                         "security review done and remediation plan defined (see Feasibility).", {})]}], size=10.5, color=INK)
 shape(s6, MSO_SHAPE.ROUNDED_RECTANGLE, 0.4, 6.22, 12.53, 0.6, fill=T_BLUE, radius=0.3, margin=0.2,
       paras=[{"runs": [("Competitors studied: ", {"bold": True, "color": NAVY}),
-                       ("MakeMyTrip, Booking.com, EaseMyTrip (OTAs, 15–30% commission, no crowd balancing) · Mindtrip.ai (AI planner, "
-                        "no hotel/PMS link) · Airbnb Experiences · state tourism apps (information only).", {})]}], size=10.5, color=INK)
+                       ("OTAs (MakeMyTrip, Booking.com: 15–30% commission) · AI planners (Mindtrip.ai: no hotel link) · state e-pass "
+                        "systems (cap entry, don't redirect). ", {}),
+                       ("None of these offers a hotel-bid Demand Exchange or a per-hotel WhatsApp AI desk.", {"bold": True, "color": ORANGE})]}], size=10.5, color=INK)
 
 prs.save(str(OUT))
 print("wrote", OUT)
